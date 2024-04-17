@@ -16,7 +16,7 @@ const Home = () => {
         <div className = {styles.body}>
             <div className = {styles.navbar}>
                 <img src = {logo} className = {styles.logo}/>
-                <h1 className = {styles.logoText}>HOSTELER</h1>
+                <h1 className = {styles.logoText}>HosteLife</h1>
                 <p className = {styles.why} onClick={toInfo}>Why Hosteler?</p>
                 <Link to = "/nav/login" className = {styles.login}>Login</Link>
                 <h1 className = {styles.register} onClick = {toRegister}>Get Started</h1>

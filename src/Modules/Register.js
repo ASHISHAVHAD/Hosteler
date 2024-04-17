@@ -29,7 +29,7 @@ const Register = () => {
         let latitude = document.getElementById('latitude');
         let longitude = document.getElementById('longitude');
         const formData = new FormData();
-        formData.append('type', 'register')
+        formData.append('type', 'register');
         formData.append('hostelName', hostelName.value);
         formData.append('address', address.value);
         formData.append('mobile', mobile.value);

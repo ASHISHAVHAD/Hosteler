@@ -19,8 +19,8 @@ const Navbar = (props) => {
             <div>
                 <div className = {styles.navbar}>
                     <img src = {logo} class = {styles.logo}></img>
-                    <h1 className = {styles.title}>HOSTELER</h1>
-                    <Link to = '/nav/home/' className = {styles.options}>Home</Link>
+                    <h1 className = {styles.title}>HosteLife</h1>
+                    <Link to = '/' className = {styles.options}>Home</Link>
                     <Link to = '/nav/hostels/*' className = {styles.options}>Hostels</Link>
                     <Link to = '/nav/contact/*' className = {styles.options}>Contact Us</Link>
                     <Link to = {'/nav/dashboard/' + user}  className = {styles.logged}>

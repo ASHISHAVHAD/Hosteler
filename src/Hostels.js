@@ -28,7 +28,7 @@ const Hostels = () => {
     if(!isLoading) {
         for(let i = 0; i < returned.length; i++) {
             arr.push(<Link to = {"/nav/hostelPage/" + returned[i][3]} className = {styles.link} >
-                            <Thumbnail id1 = {(i+1).toString()} hostelName = {returned[i][0]} location = {returned[i][1]} mobile = {returned[i][2]} email = {returned[i][3]} id = {'hotelNumber' + i.toString} />
+                            <Thumbnail id1 = {returned[i][3]} hostelName = {returned[i][0]} location = {returned[i][1]} mobile = {returned[i][2]} email = {returned[i][3]} id = {'hotelNumber' + i.toString} />
                         </Link>
                         );
         }
