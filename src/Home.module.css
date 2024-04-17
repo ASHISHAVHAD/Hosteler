@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 100vw;
+}
+
+.navbar {
+    display: grid;
+    grid-template-columns: 10% 50% auto auto auto;
+    align-items: center;
+    height: 10vh;
+}
+
+.logo {
+    height: 8vh;
+    margin-left: 3vw;
+}
+
+.why {
+    font-family: "Poppins", sans-serif;
+    font-size: 2vh;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.why:hover, .login:hover {
+    color: #F93943;
+}
+
+.login {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    font-size: 2vh;
+    color: black;
+    height: 5vh;
+    margin-right: 3vw;
+    border-radius: 5px;
+    font-weight: bold;
+    user-select: none;
+}
+
+.register {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    font-size: 2vh;
+    color: #F93943;
+    background-color: rgb(43, 43, 43);
+    height: 5vh;
+    margin-right: 3vw;
+    border-radius: 5px;
+    font-weight: bold;
+    user-select: none;
+    cursor: pointer;
+}
+
+.register:hover {
+    color: black;
+    background-color: #F93943;
+}
+
+.welcomeBox {
+    background-image: url('WelcomeImage.jpg');
+    height: 90vh;
+    width: 100vw;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+.welcomeText {
+    position: relative;
+    left: 15vw;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 2vw;
+    color: black;
+    background-color: white;
+    height: 80vh;
+    width: 35vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+.welcomePara {
+    font-family: "Poppins", sans-serif;
+    font-size: 1vw;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: white;
+}
+
+.forStudents {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    margin: 5vw;
+    user-select: none;
+    background-color: rgb(43, 43, 43);
+    width: 30vw;
+    box-sizing: border-box;
+    padding: 3vw;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    box-shadow: 15px 15px #F93943;
+}
+
+.infoTitle {
+    font-size: 5vh;
+    margin-bottom: 0;
+}
+
+.infoSubTitle {
+    font-size: 3vh;
+    margin-bottom: 0;
+    color: #F93943;
+}
+
+.infoText {
+    margin-top: 0;
+}
+
+.infoButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    font-size: 2vh;
+    color: black;
+    background-color: #F93943;
+    height: 5vh;
+    margin-right: 3vw;
+    border-radius: 5px;
+    font-weight: bold;
+    box-sizing: border-box;
+    padding: 1vh;
+    margin-top: 2vh;
+}
+
+.infoButton:hover {
+    color: #F93943;
+    background-color: black;
+    border: 2px solid #F93943;
+}

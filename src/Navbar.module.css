@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.navbar {
+    display: grid;
+    grid-template-columns: 10% 40% auto auto auto auto auto;
+    height: 10vh;
+    width: 100vw;
+    border: 2px solid black;
+    box-sizing: border-box;
+    vertical-align: middle;
+    align-items: center;
+    background-color: rgb(26, 26, 26);
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    user-select: none;
+}
+
+.title {
+    color: #F93943;
+}
+
+.logo {
+    height: 7vh;
+    margin-left: 5vw;
+    user-select: none;
+}
+
+.options {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1vw;
+    height: 2vw;
+    user-select: none;
+    text-decoration: none;
+    color: rgb(26, 26, 26);
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    font-size: 2vh;
+    background-color: #F93943;
+    border-radius: 0.25vh;
+    box-sizing: border-box;
+}
+
+.options:hover {
+    background-color: rgb(26, 26, 26);
+    color: #F93943;
+    border: 2px solid #F93943;
+}
+
+.logged {
+    height: 2vw;
+    display: inline-flex;
+    align-items: center;
+    border: 2px solid #F93943;
+    box-sizing: border-box;
+    margin-right: 1vw;
+    border-radius: 0.25vh;
+    padding: 3px;
+    justify-content: center;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.logged:hover {
+    background-color: #F93943;
+    .userName {
+        color: rgb(26, 26, 26);
+    }
+}
+
+.userLogo {
+    height: 1.5vw;
+    margin-right: 5px;
+}
+
+.userName {
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    font-size: 2vh;
+    color: #F93943;
+}
+
+.navbarLogged {
+    display: grid;
+    grid-template-columns: 10% 40% auto auto auto auto;
+    height: 10vh;
+    width: 100vw;
+    border: 2px solid black;
+    box-sizing: border-box;
+    vertical-align: middle;
+    align-items: center;
+    background-color: rgb(26, 26, 26);
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    user-select: none;
+}
+
+.menu {
+    display: none;
+}

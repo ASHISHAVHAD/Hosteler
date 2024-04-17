@@ -1,0 +1,10 @@
+.body {
+    width: 100vw;
+    margin-top: 15vh;
+    margin-left: 2vw;
+}
+
+.leftNavbar {
+    display: inline-flex;
+    flex-direction: column;
+}

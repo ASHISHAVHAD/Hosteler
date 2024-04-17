@@ -1,0 +1,29 @@
+.body {
+    background-color: whitesmoke;
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.leftBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 30vw;
+    height: 80vh;
+    border: 2px solid black;
+}
+
+.rightBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    user-select: none;
+    text-decoration: none;
+}
+
+.link {
+    text-decoration: none;
+}
