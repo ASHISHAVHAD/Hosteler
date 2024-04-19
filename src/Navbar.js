@@ -23,7 +23,7 @@ const Navbar = (props) => {
                     <Link to = '/' className = {styles.options}>Home</Link>
                     <Link to = '/nav/hostels/*' className = {styles.options}>Hostels</Link>
                     <Link to = '/nav/contact/*' className = {styles.options}>Contact Us</Link>
-                    <Link to = {'/nav/dashboard/' + user}  className = {styles.logged}>
+                    <Link to = {'/nav/dashboard/dashboardDefault//'}  className = {styles.logged}>
                         <img src = {userIcon} className = {styles.userLogo} />
                         <h1 className = {styles.userName} >Dashboard</h1>
                     </Link>
@@ -37,7 +37,7 @@ const Navbar = (props) => {
         <div>
             <div className = {styles.navbar}>
                 <img src = {logo} class = {styles.logo}></img>
-                <h1 className = {styles.title}>HOSTELER</h1>
+                <h1 className = {styles.title}>HosteLife</h1>
                 <Link to = '/nav/home/' className = {styles.options}>Home</Link>
                 <Link to = '/nav/hostels/*' className = {styles.options}>Hostels</Link>
                 <Link to = '/nav/contact/*' className = {styles.options}>Contact Us</Link>

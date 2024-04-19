@@ -3,10 +3,11 @@
 
 .body {
     width: 100vw;
-    margin-top: 15vh;
-    margin-left: 2vw;
-    display: grid;
-    grid-template-columns: 30% 70%;
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: white;
 }
 
 .leftNavbar {
@@ -54,12 +55,19 @@
 
 .dashboardTitleBlock {
     display: flex;
-    align-items: start;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    width: 20vw;
+    height: 90vh;
+    box-sizing: border-box;
+    background-color: #4158D0;
+background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+
 }
 
 .dashboardTitle {
-    text-orientation: upright;
-    writing-mode: vertical-lr;
     user-select: none;
     font-family: "Kanit", sans-serif;
     font-size: 6vh;
@@ -69,6 +77,35 @@
     box-shadow: 10px 10px #095e64;
 }
 
-.image {
-    
+.dashboardOption {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    height: 4vh;
+    width: 10vw;
+    margin-bottom: 20px;
+    color: white;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    box-sizing: border-box;
+    font-size: 2vh;
+    user-select: none;
+}
+.dashboardOption:hover {
+    border: 0.1vh solid white;
+    background-color: white;
+    color: black;
+    transition: background-color 0.4s ease-in-out;
+    cursor: pointer;
+}
+.user {
+    height: 15vh;
+    margin-bottom: 5vh;
+}
+
+.smallLogos {
+    height: 3vh;
+    margin-right: 0.5vw;
 }

@@ -1,17 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 .body {
-    background-color: whitesmoke;
+    background-color: white;
     margin-top: 10vh;
     display: flex;
-    flex-direction: row;
-}
-
-.leftBox {
-    display: flex;
     flex-direction: column;
+    align-items: center;
+    padding: 5vh;
+    font-family: "Poppins", sans-serif;
+}
+.topBar {
+    background-color: white;
+    height: 8vh;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 10vh;
+    padding: 2vh;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    width: 30vw;
-    height: 80vh;
-    border: 2px solid black;
 }
 
 .rightBox {
@@ -27,3 +34,75 @@
 .link {
     text-decoration: none;
 }
+
+.searchBar {
+    border: 2px solid rgb(196, 196, 196);
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 60vw;
+    border-radius: 30px / 50%;
+    height: 6vh;
+    box-sizing: border-box;
+}
+
+.searchLogo {
+    height: 4.5vh;
+    margin-right: 0.5vw;
+    margin-left: 0.5vw;
+}
+
+.search {
+    height: 3.5vh;
+    width: 30vw;
+    border: none;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.7vh;
+    margin-right: 10vw;
+}
+
+.search:focus {
+    outline: none;
+}
+
+.filters {
+    user-select: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 17px / 50%;
+    height: 3.5vh;
+    width: 7vw;
+    color: black;
+    border: 2px solid rgb(196, 196, 196);
+    margin-right: 1vw;
+    box-sizing: border-box;
+    font-weight: bold;
+}
+
+.filters:hover {
+    cursor: pointer;
+}
+
+.filtersLogo {
+    height: 3vh;
+    margin-right: 0.5vw;
+}
+.searchButton {
+    user-select: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(25, 31, 31);
+    border-radius: 17px / 50%;
+    height: 3.5vh;
+    width: 7vw;
+    color: white;
+    border: none;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.7vh;
+    font-weight: bold;
+    cursor: pointer;
+}
+

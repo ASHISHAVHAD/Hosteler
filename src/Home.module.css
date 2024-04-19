@@ -168,3 +168,55 @@
     background-color: black;
     border: 2px solid #F93943;
 }
+
+.footer {
+    color: #fff;
+    padding: 20px;
+    position: relative;
+    text-align: center;
+    background-color: #FA8BFF;
+    background-image: linear-gradient(90deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);    
+    background-size: 200% auto;
+}
+
+.footer:hover {
+    animation: gradientAnimation 5s linear infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.footerContent {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footerLinks {
+    list-style: none;
+    padding: 0;
+}
+
+.footerLinks li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.footerTitle {
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-size: 3vh;
+}
+
+.socialImages {
+    height: 5vh;
+    margin: 2vh;
+}

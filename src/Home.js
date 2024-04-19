@@ -1,6 +1,9 @@
 import styles from './Home.module.css';
 import { Link } from 'react-router-dom';
 import logo from './hostel.png';
+import twitter from './twitter.png';
+import instagram from './instagram.png';
+import linkedin from './linkedin.png';
 
 const Home = () => {
 
@@ -17,7 +20,7 @@ const Home = () => {
             <div className = {styles.navbar}>
                 <img src = {logo} className = {styles.logo}/>
                 <h1 className = {styles.logoText}>HosteLife</h1>
-                <p className = {styles.why} onClick={toInfo}>Why Hosteler?</p>
+                <p className = {styles.why} onClick={toInfo}>Why HosteLife?</p>
                 <Link to = "/nav/login" className = {styles.login}>Login</Link>
                 <h1 className = {styles.register} onClick = {toRegister}>Get Started</h1>
             </div>
@@ -52,6 +55,29 @@ const Home = () => {
                     <Link to = "/nav/register" className = {styles.infoButton}>Register as Hostel</Link>
                 </div>
             </div>
+
+            <footer className = {styles.footer}>
+                <div className ={styles.footerContent}>
+                    <h3 className = {styles.footerTitle}>Socials</h3>
+                    <ul className = {styles.footerLinks}>
+                        <li>
+                            <a href="http://twitter.com">
+                                <img src = {twitter} className = {styles.socialImages}/>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://instagram.com">
+                                <img src = {instagram} className = {styles.socialImages}/>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://linkedin.com">
+                                <img src = {linkedin} className = {styles.socialImages}/>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </footer>
         </div>
     )
 }

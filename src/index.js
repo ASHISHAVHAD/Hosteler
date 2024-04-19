@@ -13,6 +13,10 @@ import Login from './Modules/Login.js';
 import Dashboard from './Modules/Dashboard.js';
 import ImageUpload from './Modules/ImageUploader.js';
 import ImageRetriever from './Modules/imageGet.js';
+import AddRoom from './Modules/AddRoom.js';
+import Profile from './Modules/Profile.js';
+import Queries from './Modules/Queries.js';
+import DashboardDefault from './Modules/DashboardDefault.js'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -26,7 +30,12 @@ root.render(
           <Route path = "/nav/contact/*" element = {<Contact/>} />
           <Route path = "/nav/register/*" element = {<Register/>} />
           <Route path = "/nav/login/*" element = {<Login/>} />
-          <Route path = "/nav/dashboard/*" element = {<Dashboard/>} />
+          <Route path = "/nav/dashboard/" element = {<Dashboard/>} >
+            <Route path = "/nav/dashboard/dashboardDefault" element = {<DashboardDefault />} />
+            <Route path = "/nav/dashboard/addRoom" element = {<AddRoom />} />
+            <Route path = "/nav/dashboard/profile" element = {<Profile />} />
+            <Route path = "/nav/dashboard/queries" element = {<Queries />} />
+          </Route>
           <Route path = "/nav/image/*" element = {<ImageUpload/>} />
         </Route>
       </Routes>

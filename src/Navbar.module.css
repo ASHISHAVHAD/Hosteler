@@ -15,6 +15,7 @@
     top: 0;
     left: 0;
     user-select: none;
+    padding-right: 2vw;
 }
 
 .title {
@@ -48,6 +49,7 @@
     background-color: rgb(26, 26, 26);
     color: #F93943;
     border: 2px solid #F93943;
+    transition: background-color 0.2s ease-in-out;
 }
 
 .logged {

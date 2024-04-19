@@ -4,6 +4,8 @@ import Thumbnail from './Modules/Thumbnail.js';
 import { Link } from "react-router-dom";
 import $ from 'jquery';
 import { useState, useEffect } from 'react';
+import search from './search.png';
+import filters from './filters.png';
 
 const Hostels = () => {
 
@@ -45,6 +47,17 @@ const Hostels = () => {
     else {
         return (
             <div className = {styles.body}>
+                <div className = {styles.topBar}>
+                    <div className = {styles.searchBar}>
+                        <img src = {search} className = {styles.searchLogo}/>
+                        <input type = "text" className = {styles.search} placeholder='Find Location'/>
+                        <div className = {styles.filters} > 
+                            <img src = {filters} className = {styles.filtersLogo}/>
+                            Filters 
+                        </div>
+                        <button className = {styles.searchButton} > Search </button>
+                    </div>
+                </div>
                 <div className = {styles.rightBox}>
                     {arr}
                 </div>
