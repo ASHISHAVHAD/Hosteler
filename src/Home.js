@@ -4,6 +4,7 @@ import logo from './hostel.png';
 import twitter from './twitter.png';
 import instagram from './instagram.png';
 import linkedin from './linkedin.png';
+import arrow from './right-arrow.png';
 
 const Home = () => {
 
@@ -27,10 +28,12 @@ const Home = () => {
 
             <div className = {styles.welcomeBox}>
                 <div className = {styles.welcomeText}>
-                    <h1>Find The Perfect Hostel</h1>
-                    <p className = {styles.welcomePara}>Learn all about how to implement font using the API CSS code. A web font is any font used in a website’s design that isn’t installed by default on the end user’s device—a counterpart to a system font. Check out the articles below for more guidance:</p>
+                    <h1 style = {{margin: '0'}}>Find The Perfect Hostel</h1>
+                    <p className = {styles.welcomePara}>
+                        Explore
+                        <img src = {arrow} className = {styles.arrow} />
+                    </p>
                 </div>
-                <img />
             </div>
 
             <div className = {styles.info} id = "whyPanel">
@@ -42,7 +45,7 @@ const Home = () => {
                     <p className = {styles.infoText}>Check out rent costs and rooms at home.</p>
                     <h2 className = {styles.infoSubTitle}>Trusted</h2>
                     <p className = {styles.infoText}>Only verified hostels are listed.</p>
-                    <Link to = "/nav/register" className = {styles.infoButton}>Register as Student</Link>
+                    <Link to = "/nav/userRegister" className = {styles.infoButton}>Register as Student</Link>
                 </div>
                 <div className = {styles.forStudents}>
                 <h1 className = {styles.infoTitle}>Hostels</h1>

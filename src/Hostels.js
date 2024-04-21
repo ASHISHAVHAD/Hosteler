@@ -6,6 +6,7 @@ import $ from 'jquery';
 import { useState, useEffect } from 'react';
 import search from './search.png';
 import filters from './filters.png';
+import Loading from './Modules/Loading.js';
 
 const Hostels = () => {
 
@@ -32,14 +33,14 @@ const Hostels = () => {
             arr.push(<Link to = {"/nav/hostelPage/" + returned[i][3]} className = {styles.link} >
                             <Thumbnail id1 = {returned[i][3]} hostelName = {returned[i][0]} location = {returned[i][1]} mobile = {returned[i][2]} email = {returned[i][3]} id = {'hotelNumber' + i.toString} />
                         </Link>
-                        );
+            );
         }
     }
 
     if(isLoading) {
         return (
-            <div className = {styles.body}>
-                Loading-----------------
+            <div>
+                <Loading />
             </div>
         )
     }

@@ -28,7 +28,7 @@ const Contact = () => {
             <div className = {styles.body}>
                 <img src = {ContactImage} className = {styles.RegisterImage}/>
                 <div className = {styles.outbox}>
-                    <h1 className = {styles.title}>Contact</h1>
+                    <h1 className = {styles.title}>Contact Us</h1>
                     <label className = {styles.labels}>Name</label>
                     <input type = "text" className = {styles.inputField} id = "name"/>
                     <label className = {styles.labels}>Mobile Number</label>

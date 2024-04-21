@@ -21,6 +21,11 @@
     margin-left: 3vw;
 }
 
+.logoText {
+    margin: 0;
+    user-select: none;
+}
+
 .why {
     font-family: "Poppins", sans-serif;
     font-size: 2vh;
@@ -75,35 +80,52 @@
 
 .welcomeBox {
     background-image: url('WelcomeImage.jpg');
+    background-position: 50% 50%;
     height: 90vh;
     width: 100vw;
     background-size: cover;
     display: flex;
-    justify-content: center;
-    align-items: center;
     user-select: none;
 }
 
 .welcomeText {
     position: relative;
-    left: 15vw;
+    left: 60vw;
+    height: 50vh;
     font-family: "Josefin Sans", sans-serif;
-    font-size: 2vw;
-    color: black;
-    background-color: white;
-    height: 80vh;
+    font-size: 4vh;
+    color: white;
     width: 35vw;
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     padding-left: 2vw;
     padding-right: 2vw;
 }
 
 .welcomePara {
     font-family: "Poppins", sans-serif;
-    font-size: 1vw;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    font-size: 3vh;
+    border-radius: 2vh;
+    padding: 2vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.welcomePara:hover {
+    background-color: #F93943;
+    color: white;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.arrow {
+    height: 5vh;
 }
 
 .info {
@@ -127,7 +149,12 @@
     padding: 3vw;
     color: white;
     font-family: "Poppins", sans-serif;
-    box-shadow: 15px 15px #F93943;
+}
+
+.forStudents:hover {
+    box-shadow: 2vw 2vh #F93943;
+    transition: box-shadow 0.5s;
+
 }
 
 .infoTitle {

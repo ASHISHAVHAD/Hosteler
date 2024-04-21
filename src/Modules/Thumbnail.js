@@ -27,7 +27,7 @@ function Thumbnail(props) {
             <div class = {styles.rightbox}>
                 <h1 class = {styles.name}>{props.hostelName}</h1>
                 <h2 class = {styles.location}>{props.location}</h2>
-                <p class = {styles.mobile}>{props.mobile}</p>
+                <p class = {styles.mobile}>+91 {props.mobile}</p>
                 <p class = {styles.mobile}>{props.email}</p>
             </div>
         </div>

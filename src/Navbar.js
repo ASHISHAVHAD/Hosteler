@@ -23,7 +23,7 @@ const Navbar = (props) => {
                     <Link to = '/' className = {styles.options}>Home</Link>
                     <Link to = '/nav/hostels/*' className = {styles.options}>Hostels</Link>
                     <Link to = '/nav/contact/*' className = {styles.options}>Contact Us</Link>
-                    <Link to = {'/nav/dashboard/dashboardDefault//'}  className = {styles.logged}>
+                    <Link to = {'/nav/dashboard/dashboardDefault/'}  className = {styles.logged}>
                         <img src = {userIcon} className = {styles.userLogo} />
                         <h1 className = {styles.userName} >Dashboard</h1>
                     </Link>

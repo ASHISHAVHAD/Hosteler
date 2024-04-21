@@ -10,23 +10,64 @@
     font-family: "Poppins", sans-serif; 
 }
 
-.outbox {
-    width: 70vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 2px solid black;
-    background-color: rgb(150, 150, 150);
-    margin-bottom: 5vh;
-}
-
-.galleryImage {
-    height: 25vh;
-    margin: 5vh;
-    user-select: none;
-}
-
 .title {
     font-size: 5vh;
     margin-bottom: 0;
+}
+
+.infoBlock {
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(37,145,251,0.98) 0.1%, rgba(0,7,128,1) 99.8% );
+    width: 80vw;
+    color: white;
+    padding: 3vh;
+    border-radius: 3vh;
+    display: grid;
+    grid-template-columns: 35% 30% 30%;
+    column-gap: 2vw;
+    padding-left: 3vw;
+    box-sizing: border-box;
+}
+
+iframe {
+    border: none;
+    border-radius: 1vh;
+    height: 30vh;
+    width: 20vw;
+}
+
+.roomsBlock {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    row-gap: 5vh;
+    padding-top: 5vh;
+    align-items: center;
+    box-sizing: border-box;
+    padding-bottom: 5vh;
+}
+
+.hostelImage {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 30vh;
+    overflow: hidden;
+    border-radius: 1.5vh;
+}
+
+.image {
+    width: 30vw;
+}
+
+.roomTitle {
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(37,145,251,0.98) 0.1%, rgba(0,7,128,1) 99.8% );
+    padding: 2vh;
+    color: white;
+    border-radius: 1.5vh;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 10vh;
+    width: 80vw;
+    box-sizing: border-box;
+    padding-left: 3vw;
 }

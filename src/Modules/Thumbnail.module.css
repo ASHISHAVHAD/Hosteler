@@ -10,11 +10,21 @@
     padding: 2vh;
     font-family: "Poppins", sans-serif;
     box-sizing: border-box;
+    align-items: center;
 }
 
 .outbox:hover {
     background-color: #F93943;
     transition: background-color 0.3s ease-in-out;
+    .name {
+        color: white;
+    }
+    .location {
+        color: white;
+    }
+    .mobile {
+        color: white;
+    }
 }
 
 .leftbox {
@@ -35,6 +45,8 @@
 
 .location {
     color: black;
+    font-weight: normal;
+    font-size: 2.5vh;
     margin-top: 0;
     margin-bottom: 0;
 }

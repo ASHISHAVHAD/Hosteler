@@ -64,6 +64,12 @@
     color: white;
 }
 
+.inputField:focus {
+    outline: none;
+    background-color: white;
+    color: black;
+}
+
 .send {
     margin-top: 5vh;
     font-family: "Poppins", sans-serif;
@@ -120,6 +126,12 @@
     background-color: rgb(112, 112, 112);
     border: none;
     color: white;
+}
+
+.locationInput:focus {
+    outline: none;
+    background-color: white;
+    color: black;
 }
 
 .gotodash {
