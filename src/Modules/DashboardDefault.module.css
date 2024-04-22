@@ -52,6 +52,12 @@
     grid-area: 1 / 2 / 3 / 3;
 }
 
+.row {
+    width: 30vw;
+    display: flex;
+    justify-content: space-evenly;
+}
+
 .areasOfInterest {
     height: 30vh;
     width: 35vw;
@@ -70,12 +76,7 @@
 }
 
 .cell {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2vh;
-    padding: 0 1vw;
-    border-bottom: 0.2vh solid black;
+    border: 2px solid black;
 }
 
 .cardTitlewhite {
@@ -91,4 +92,31 @@
     font-size: 2vh;
     padding: 0 1vw;
     border-bottom: 0.2vh solid white;
+}
+
+.table {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0;
+}
+
+.h2 {
+    font-size: 2.1vh;
+    border-bottom: 0.2vh solid black;
+    margin: 0;
+    width: 100%;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p {
+    margin: 0;
+    font-size: 2.1vh;
+    width: 100%;
+    border-bottom: 0.2vh solid black;
+    margin-top: 1vh;
 }
