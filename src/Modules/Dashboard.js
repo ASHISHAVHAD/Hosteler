@@ -13,6 +13,13 @@ import userSmall from '../Images/userSmall.png';
 
 const Dashboard = () => {
 
+    function logoutFun() {
+        localStorage.removeItem('token');
+        console.log(localStorage.getItem('token'));
+        window.location.reload();
+        window.location.href = "/nav/login/*";
+    }
+
     return (
         <div class = {styles.body}>
             <div className = {styles.dashboardTitleBlock} >
@@ -32,7 +39,7 @@ const Dashboard = () => {
                 <Link to = "/nav/dashboard/updateRoom/" className = {styles.dashboardOption}>
                     <img src = {arrow} className = {styles.smallLogos} />Update Room
                 </Link>
-                <h3 className = {styles.dashboardOption} style = {{marginTop: '10vh'}}>
+                <h3 className = {styles.dashboardOption} style = {{marginTop: '10vh'}} onClick = {logoutFun} >
                     <img src = {logout} className = {styles.smallLogos} />Logout
                 </h3>
             </div>

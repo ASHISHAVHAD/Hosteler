@@ -29,10 +29,10 @@ const Home = () => {
             <div className = {styles.welcomeBox}>
                 <div className = {styles.welcomeText}>
                     <h1 style = {{margin: '0'}}>Find The Perfect Hostel</h1>
-                    <p className = {styles.welcomePara}>
+                    <Link to = "/nav/hostels/" className = {styles.welcomePara}>
                         Explore
                         <img src = {arrow} className = {styles.arrow} />
-                    </p>
+                    </Link>
                 </div>
             </div>
 

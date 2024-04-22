@@ -9,7 +9,6 @@ const Navbar = (props) => {
         localStorage.removeItem('token');
         console.log(localStorage.getItem('token'));
         window.location.reload();
-        window.location.href("/nav/login/*");
     }
 
     if(localStorage.getItem('token') != null) {
@@ -27,7 +26,7 @@ const Navbar = (props) => {
                         <img src = {userIcon} className = {styles.userLogo} />
                         <h1 className = {styles.userName} >Dashboard</h1>
                     </Link>
-                    <Link to = "/" className = {styles.options} style = {{cursor: 'pointer'}} onClick = {logout}>Logout</Link>
+                    <Link to = "/nav/login/" className = {styles.options} style = {{cursor: 'pointer'}} onClick = {logout}>Logout</Link>
                 </div>
                 <Outlet className = {styles.outlet}/>
             </div>

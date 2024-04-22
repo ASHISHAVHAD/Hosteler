@@ -4,18 +4,10 @@ import { useState } from 'react';
 import $ from 'jquery';
 import { Link } from 'react-router-dom';
 
-const Login = () => {
+const UserLogin = () => {
 
     let [loggedIn, setLoggedIn] = useState(false);
 
-    function removeErrorMessage(errorElement) {
-        document.getElementById(errorElement).innerHTML = "";
-    }
-
-    function validateEmail(email) {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return emailRegex.test(email);
-    }
 
     function submitHandler () {
         
@@ -23,21 +15,10 @@ const Login = () => {
         const password = document.getElementById('password').value;
         console.log(email);
 
-        if(!validateEmail(email)) {
-            document.getElementById("emailError").innerHTML = "Enter valid email id";
-            return false;
-        }
-
-        function validatePassword(password) {
-            // Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one number, and one special character
-            const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{8,}$/;
-            return passwordRegex.test(password);
-        }
-
         if(email != '' && password != '') {
             $.ajax ({
                 type : 'POST',
-                url : 'http://localhost/wt/userRegistration.php',
+                url : 'http://localhost/wt/studentRegistration.php',
                 data : {
                     'type' : 'login',
                     'email' : email,
@@ -46,33 +27,29 @@ const Login = () => {
                 success(data) {
                     if(data == 'true') {
                         setLoggedIn(true);
-                        localStorage.setItem('token', email);
-                        console.log(data);
+                        localStorage.setItem('user', email);
                         window.location.reload();
                     }
                     else {
                         console.log(data);
-                        document.getElementById('passwordError').innerHTML = "Invalid email or password!";
                     }
                 }
             })
         }
     }
 
-    if(localStorage.getItem('token') == null) {
+    if(localStorage.getItem('user') == null && localStorage.getItem('token') == null) {
         return (
             <div className = {styles.body}>
                 <img src = {LoginImage} className = {styles.RegisterImage}/>
                 <div className = {styles.outbox}>
                     <h1 className = {styles.title}>
-                        Hostel Login
+                        User Login
                     </h1>
                     <label className = {styles.labels}>Email</label>
-                    <input type = "email" className = {styles.inputField} id = 'email' onChange={() => removeErrorMessage("emailError")}/>
-                    <span id = "emailError" className = {styles.error}></span>
+                    <input type = "email" className = {styles.inputField} id = 'email'/>
                     <label className = {styles.labels}>Password</label>
-                    <input type = "password" className = {styles.inputField} id = 'password' onChange={() => removeErrorMessage("passwordError")}/>
-                    <span id = "passwordError" className = {styles.error}></span>
+                    <input type = "password" className = {styles.inputField} id = 'password'/>
                     <button className = {styles.send} onClick = {submitHandler}>Login</button>
                 </div>
             </div>
@@ -85,7 +62,7 @@ const Login = () => {
                 <img src = {LoginImage} className = {styles.RegisterImage}/>
                 <div className = {styles.outbox}>
                     <h1 className = {styles.title}>Logged In Successfully!</h1>
-                    <Link to = {'/nav/dashboard/dashboardDefault/' + localStorage.getItem('token')} className = {styles.gotodash} >Go To Dashboard</Link>
+                    <Link to = {'/nav/dashboard/' + localStorage.getItem('token')} className = {styles.gotodash} >Go To Dashboard</Link>
                 </div>
             </div>
         )
@@ -93,4 +70,4 @@ const Login = () => {
     
 }
 
-export default Login;
+export default UserLogin;

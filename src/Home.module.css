@@ -16,6 +16,13 @@
     height: 10vh;
 }
 
+@media (max-aspect-ratio: 1 ) {
+    .navbar {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 .logo {
     height: 8vh;
     margin-left: 3vw;
@@ -88,6 +95,15 @@
     user-select: none;
 }
 
+@media (max-aspect-ratio: 1 ) {
+    .welcomeBox {
+        height: 80vh;
+        margin-bottom: 10vh;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
 .welcomeText {
     position: relative;
     left: 60vw;
@@ -102,6 +118,13 @@
     align-items: start;
     padding-left: 2vw;
     padding-right: 2vw;
+    box-sizing: border-box;
+}
+
+@media (max-aspect-ratio: 1 ) {
+    .welcomeText {
+        left: 0;
+    }
 }
 
 .welcomePara {
@@ -116,6 +139,7 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
 }
 
 .welcomePara:hover {
@@ -136,6 +160,13 @@
     background-color: white;
 }
 
+@media (max-aspect-ratio: 1 ) {
+    .info {
+        flex-direction: column;
+        width: 100vw;
+    }
+}
+
 .forStudents {
     display: flex;
     flex-direction: column;
@@ -149,6 +180,14 @@
     padding: 3vw;
     color: white;
     font-family: "Poppins", sans-serif;
+    transition: box-shadow 0.5s;
+}
+
+@media (max-aspect-ratio: 1 ) {
+
+    .forStudents {
+        width: 100vw;
+    }
 }
 
 .forStudents:hover {
@@ -188,12 +227,14 @@
     box-sizing: border-box;
     padding: 1vh;
     margin-top: 2vh;
+    transition: background-color 0.5s;
 }
 
 .infoButton:hover {
     color: #F93943;
     background-color: black;
     border: 2px solid #F93943;
+    transition: background-color 0.5s;
 }
 
 .footer {

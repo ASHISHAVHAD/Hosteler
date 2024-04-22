@@ -3,7 +3,7 @@ import $ from 'jquery';
 
 const addRoom = () => {
 
-    function addRoom() {
+    function addRoom1() {
         let roomFloor = document.getElementById('roomFloor');
         let roomno = document.getElementById('roomNo');
         let rent = document.getElementById('rent');
@@ -27,6 +27,7 @@ const addRoom = () => {
             contentType: false,
             processData: false,
             success (data) {
+                console.log(data);
                 var x = window.confirm("Added successfully")
                 if(x) {
                     window.location.reload();
@@ -51,7 +52,7 @@ const addRoom = () => {
                 <input type = "text" className = {styles.inputField} id = "occupied"/>
                 <label className = {styles.inputLabel}>Image</label>
                 <input type = "file" accept='image/*' className = {styles.inputField} id = "roomImage"/>
-                <button className = {styles.addRoomButton} onClick={addRoom}>Confirm & Add</button>
+                <button className = {styles.addRoomButton} onClick={addRoom1}>Confirm & Add</button>
             </div>
         </div>
         

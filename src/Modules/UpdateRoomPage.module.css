@@ -1,0 +1,9 @@
+.body {
+    height: 90vh;
+    display: flex;
+    padding: 5vh;
+    box-sizing: border-box;
+    width: 80vw;
+    overflow: scroll;
+    column-gap: 5vw;
+}

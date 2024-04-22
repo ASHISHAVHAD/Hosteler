@@ -17,6 +17,20 @@
     font-size: 3vh;
     display: flex;
     flex-direction: column;
+    font-family: "Poppins", sans-serif;
+}
+
+.updateRoomForm {
+    width: 20vw;
+    padding: 5vh;
+    border-radius: 1vh;
+    background-color: #517889;
+    color: white;
+    font-size: 3vh;
+    display: flex;
+    flex-direction: column;
+    font-family: "Poppins", sans-serif;
+    height: fit-content;
 }
 
 .title {
@@ -74,4 +88,10 @@
 
 .image {
     width: 20vw;
+}
+
+.roomImage {
+    height: 30vh;
+    width: 20vw;
+    overflow: hidden;
 }
