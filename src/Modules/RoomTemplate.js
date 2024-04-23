@@ -3,7 +3,7 @@ import image1 from '../hostelThumbnail.jpg';
 import bookmark from './bookmark.png';
 import add from './add.png';
 import { useState, useRef, createElement } from 'react';
-import $ from 'jquery';
+import $, { data } from 'jquery';
 
 const RoomTemplate = (props) => {
 
@@ -12,6 +12,7 @@ const RoomTemplate = (props) => {
     const query = useRef();
     const cancel = useRef();
     const send = useRef();
+    const saveButton = useRef();
 
     $.ajax({
         url: 'http://localhost/wt/roomImage.php',
@@ -68,6 +69,27 @@ const RoomTemplate = (props) => {
         });
     }
 
+    function save() {
+        $.ajax({
+            url: 'http://localhost/wt/handleQuery.php',
+            type: 'POST',
+            data: { 
+                'type' : 'save',
+                'email' : localStorage.getItem('user'),
+                'roomid' : props.arr[5] 
+            },
+            success: function (response) {
+                if(response == 'true') {
+                    saveButton.current.innerText = 'Saved';
+                }
+            },
+            error: function (xhr, status, error) {
+                console.error('Error retrieving image:', error);
+                alert('Error retrieving image');
+            }
+        });
+    }
+
     return (
         <div className = {styles.outbox}>
             <div className = {styles.imagediv} >
@@ -81,7 +103,7 @@ const RoomTemplate = (props) => {
                 <p className = {styles.subtitle}>Available <strong>{parseInt(props.arr[3]) - (props.arr[4])}</strong></p>
             </div>
             <div className = {styles.buttonBlock} >
-                <button className = {styles.button}>
+                <button className = {styles.button} onClick = {save} ref = {saveButton}>
                     <img src = {bookmark} className = {styles.bookmark}/>
                     Save
                 </button>

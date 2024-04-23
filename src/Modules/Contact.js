@@ -26,7 +26,9 @@ const Contact = () => {
     if(!sent) {
         return (
             <div className = {styles.body}>
-                <img src = {ContactImage} className = {styles.RegisterImage}/>
+                <div className = {styles.imageContainer}>
+                    <img src = {ContactImage} className = {styles.RegisterImage}/>
+                </div>
                 <div className = {styles.outbox}>
                     <h1 className = {styles.title}>Contact Us</h1>
                     <label className = {styles.labels}>Name</label>

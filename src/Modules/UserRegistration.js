@@ -80,7 +80,9 @@ const UserRegistration = () => {
     if(registered) {
         return (
             <div className = {styles.body}>
-                <img src = {RegisterImage} className = {styles.RegisterImage}/>
+                <div className = {styles.imageContainer}>
+                    <img src = {RegisterImage} className = {styles.RegisterImage}/>
+                </div>
                 <div className = {styles.outbox}>
                     <h1 className = {styles.title}>Registered Successfully!</h1>
                     <Link to = "/nav/login" className = {styles.done}>Done</Link>
@@ -91,7 +93,9 @@ const UserRegistration = () => {
 
     return (
         <div className = {styles.body}>
-            <img src = {RegisterImage} className = {styles.RegisterImage}/>
+            <div className = {styles.imageContainer}>
+                <img src = {RegisterImage} className = {styles.RegisterImage}/>
+            </div>
             <div className = {styles.outbox}>
                 <h1 className = {styles.title}>Join the platform!</h1>
                 <label className = {styles.labels}>Name</label>
@@ -109,6 +113,7 @@ const UserRegistration = () => {
                 <input type = "password" className = {styles.inputField} id = 'confirmPassword' onChange={() => removeErrorMessage("passwordError")}/>
                 <span id = "passwordError" className = {styles.error}></span>
                 <button className = {styles.send} onClick={Registration}>Register</button>
+                <Link to = '/nav/register/*'className = {styles.error}>Click here to register as <strong>Hostel</strong></Link>
             </div>
         </div>
     )

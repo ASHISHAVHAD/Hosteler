@@ -92,7 +92,9 @@ const Register = () => {
     if(registered) {
         return (
             <div className = {styles.body}>
-                <img src = {RegisterImage} className = {styles.RegisterImage}/>
+                <div className = {styles.imageContainer}>
+                    <img src = {RegisterImage} className = {styles.RegisterImage}/>
+                </div>
                 <div className = {styles.outbox}>
                     <h1 className = {styles.title}>Registered Successfully!</h1>
                     <Link to = "/nav/login" className = {styles.done}>Done</Link>
@@ -103,7 +105,9 @@ const Register = () => {
 
     return (
         <div className = {styles.body}>
-            <img src = {RegisterImage} className = {styles.RegisterImage}/>
+            <div className = {styles.imageContainer}>
+                <img src = {RegisterImage} className = {styles.RegisterImage}/>
+            </div>
             <div className = {styles.outbox}>
                 <h1 className = {styles.title}>Join the platform!</h1>
                 <label className = {styles.labels}>Hostel Name</label>
@@ -133,6 +137,7 @@ const Register = () => {
                 <label className = {styles.labels}>Image</label>
                 <input type = "file"  accept="image/*" className = {styles.inputField} onChange={handleImageChange} id = "thumbnail"/>
                 <button className = {styles.send} onClick={Registration}>Register</button>
+                <Link to = '/nav/userRegister/*'className = {styles.error}>Click here to register as <strong>Student</strong></Link>
             </div>
         </div>
     )

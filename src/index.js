@@ -20,6 +20,8 @@ import DashboardDefault from './Modules/DashboardDefault.js'
 import UserRegistration from './Modules/UserRegistration.js';
 import UserLogin from './Modules/UserLogin.js';
 import UpdateRoomPage from './Modules/UpdateRoomPage.js';
+import UserQueries from './Modules/UserQueries.js';
+import UserProfile from './Modules/UserProfile.js';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -27,7 +29,6 @@ root.render(
       <Routes>
         <Route index element = {<Home/>} />
         <Route path="/nav/" element={<Navbar />}>
-          <Route path="home/*" element = {<Home />} />
           <Route path = "/nav/hostels/*" element = {<Hostels/>}/>
           <Route path = "/nav/hostelPage/*" element = {<HostelPage/>} />
           <Route path = "/nav/contact/*" element = {<Contact/>} />
@@ -39,7 +40,9 @@ root.render(
             <Route path = "/nav/dashboard/dashboardDefault/*" element = {<DashboardDefault />} />
             <Route path = "/nav/dashboard/addRoom/*" element = {<AddRoom />} />
             <Route path = "/nav/dashboard/profile/*" element = {<Profile />} />
+            <Route path = "/nav/dashboard/userProfile/*" element = {<UserProfile />} />
             <Route path = "/nav/dashboard/queries/*" element = {<Queries />} />
+            <Route path = "/nav/dashboard/userQueries/*" element = {<UserQueries />} />
             <Route path = "/nav/dashboard/updateRoom/*" element = {<UpdateRoomPage />} />
           </Route>
           <Route path = "/nav/image/*" element = {<ImageUpload/>} />

@@ -14,6 +14,14 @@
     box-shadow: 0 0 0.5vh black;
 }
 
+@media (max-aspect-ratio: 1 ) {
+    .outbox {
+        flex-direction: column;
+        width: 90vw;
+        height: fit-content;
+    }
+}
+
 .outbox:hover {
     background-color: #F93943;
     transition: background-color 0.3s ease-in-out;
@@ -28,6 +36,7 @@
     }
 }
 
+
 .leftbox {
     color: black;
     display: inline-flex;
@@ -41,19 +50,42 @@
     border-radius: 1.5vh;
 }
 
+@media (max-aspect-ratio: 1 ) {
+    .leftbox {
+        height: 15vh;
+        width: 70vw;
+    }
+}
+
 .rightbox {
     height: 20vh;
     width: 30vw;
     box-sizing: border-box;
+    overflow: hidden;
+    @media (max-aspect-ratio: 1 ) {
+        width: 90vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: fit-content;
+    }
 }
 
 .map {
     height: 20vh;
     width: 15vw;
+    @media (max-aspect-ratio: 1 ) {
+        height: 15vh;
+        width: 70vw;
+    }
 }
 
 .image {
     width: 17vw;
+    @media (max-aspect-ratio: 1 ) {
+        width: 80vw;
+    }
 }
 
 .location {
@@ -62,6 +94,9 @@
     font-size: 2.5vh;
     margin-top: 0;
     margin-bottom: 0;
+    @media (max-aspect-ratio: 1 ) {
+        font-size: 1.9vh;
+    }
 }
 
 .name {
@@ -74,4 +109,7 @@
 .mobile {
     color: black;
     font-size: 2vh;
+    @media (max-aspect-ratio: 1 ) {
+        margin: 0;
+    }
 }

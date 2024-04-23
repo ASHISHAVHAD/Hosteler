@@ -22,13 +22,13 @@ const Home = () => {
                 <img src = {logo} className = {styles.logo}/>
                 <h1 className = {styles.logoText}>HosteLife</h1>
                 <p className = {styles.why} onClick={toInfo}>Why HosteLife?</p>
-                <Link to = "/nav/login" className = {styles.login}>Login</Link>
+                <Link to = "/nav/userLogin" className = {styles.login}>Login</Link>
                 <h1 className = {styles.register} onClick = {toRegister}>Get Started</h1>
             </div>
 
             <div className = {styles.welcomeBox}>
                 <div className = {styles.welcomeText}>
-                    <h1 style = {{margin: '0'}}>Find The Perfect Hostel</h1>
+                    <h1 className = {styles.title}>Find The Perfect Hostel</h1>
                     <Link to = "/nav/hostels/" className = {styles.welcomePara}>
                         Explore
                         <img src = {arrow} className = {styles.arrow} />
@@ -48,7 +48,7 @@ const Home = () => {
                     <Link to = "/nav/userRegister" className = {styles.infoButton}>Register as Student</Link>
                 </div>
                 <div className = {styles.forStudents}>
-                <h1 className = {styles.infoTitle}>Hostels</h1>
+                    <h1 className = {styles.infoTitle}>Hostels</h1>
                     <h2 className = {styles.infoSubTitle}>Become Visible</h2>
                     <p className = {styles.infoText}>Get noticed by potential customers to increase reach.</p>
                     <h2 className = {styles.infoSubTitle}>Showcase</h2>
@@ -62,23 +62,17 @@ const Home = () => {
             <footer className = {styles.footer}>
                 <div className ={styles.footerContent}>
                     <h3 className = {styles.footerTitle}>Socials</h3>
-                    <ul className = {styles.footerLinks}>
-                        <li>
-                            <a href="http://twitter.com">
-                                <img src = {twitter} className = {styles.socialImages}/>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="http://instagram.com">
-                                <img src = {instagram} className = {styles.socialImages}/>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="http://linkedin.com">
-                                <img src = {linkedin} className = {styles.socialImages}/>
-                            </a>
-                        </li>
-                    </ul>
+                    <a href="http://twitter.com">
+                        <img src = {twitter} className = {styles.socialImages}/>
+                    </a>
+
+                    <a href="http://instagram.com">
+                        <img src = {instagram} className = {styles.socialImages}/>
+                    </a>
+
+                    <a href="http://linkedin.com">
+                        <img src = {linkedin} className = {styles.socialImages}/>
+                    </a>
                 </div>
             </footer>
         </div>

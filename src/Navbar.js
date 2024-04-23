@@ -7,11 +7,11 @@ const Navbar = (props) => {
 
     function logout() {
         localStorage.removeItem('token');
-        console.log(localStorage.getItem('token'));
-        window.location.reload();
+        localStorage.removeItem('user');
+        window.location.href = '/nav/userLogin/*';
     }
-
-    if(localStorage.getItem('token') != null) {
+    
+    if(localStorage.getItem('token') != null || localStorage.getItem('user') != null) {
 
         var user = localStorage.getItem('token');
         return (
@@ -37,11 +37,11 @@ const Navbar = (props) => {
             <div className = {styles.navbar}>
                 <img src = {logo} class = {styles.logo}></img>
                 <h1 className = {styles.title}>HosteLife</h1>
-                <Link to = '/nav/home/' className = {styles.options}>Home</Link>
+                <Link to = '/' className = {styles.options}>Home</Link>
                 <Link to = '/nav/hostels/*' className = {styles.options}>Hostels</Link>
                 <Link to = '/nav/contact/*' className = {styles.options}>Contact Us</Link>
-                <Link to = '/nav/register/*'className = {styles.options}>Register</Link>
-                <Link to = '/nav/login/*' className = {styles.options}>Login</Link>
+                <Link to = '/nav/userRegister/*'className = {styles.options}>Register</Link>
+                <Link to = '/nav/userLogin/*' className = {styles.options}>Login</Link>
             </div>
             <Outlet className = {styles.outlet}/>
         </div>

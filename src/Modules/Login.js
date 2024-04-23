@@ -17,21 +17,20 @@ const Login = () => {
         return emailRegex.test(email);
     }
 
+    function validatePassword(password) {
+        // Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one number, and one special character
+        const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{8,}$/;
+        return passwordRegex.test(password);
+    }
+
     function submitHandler () {
         
         const email = document.getElementById('email').value;
         const password = document.getElementById('password').value;
-        console.log(email);
 
         if(!validateEmail(email)) {
             document.getElementById("emailError").innerHTML = "Enter valid email id";
             return false;
-        }
-
-        function validatePassword(password) {
-            // Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one number, and one special character
-            const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{8,}$/;
-            return passwordRegex.test(password);
         }
 
         if(email != '' && password != '') {
@@ -62,7 +61,9 @@ const Login = () => {
     if(localStorage.getItem('token') == null) {
         return (
             <div className = {styles.body}>
-                <img src = {LoginImage} className = {styles.RegisterImage}/>
+                <div className = {styles.imageContainer}>
+                    <img src = {LoginImage} className = {styles.RegisterImage}/>
+                </div>
                 <div className = {styles.outbox}>
                     <h1 className = {styles.title}>
                         Hostel Login
@@ -74,6 +75,7 @@ const Login = () => {
                     <input type = "password" className = {styles.inputField} id = 'password' onChange={() => removeErrorMessage("passwordError")}/>
                     <span id = "passwordError" className = {styles.error}></span>
                     <button className = {styles.send} onClick = {submitHandler}>Login</button>
+                    <Link to = '/nav/userLogin/*'className = {styles.error}>Click here to login as <strong>Student</strong></Link>
                 </div>
             </div>
         )
@@ -82,7 +84,9 @@ const Login = () => {
     else {
         return (
             <div className = {styles.body}>
-                <img src = {LoginImage} className = {styles.RegisterImage}/>
+                <div className = {styles.imageContainer}>
+                    <img src = {LoginImage} className = {styles.RegisterImage}/>
+                </div>
                 <div className = {styles.outbox}>
                     <h1 className = {styles.title}>Logged In Successfully!</h1>
                     <Link to = {'/nav/dashboard/dashboardDefault/' + localStorage.getItem('token')} className = {styles.gotodash} >Go To Dashboard</Link>

@@ -29,11 +29,11 @@ const DashboardDefault = () => {
 
     if(!loading) {
         for(let i = 0; i < returned.length; i++) {
-            arr1.push(<p classNamme = {styles.h2}>{returned[i][1]}</p>);
-            arr2.push(<p classNamme = {styles.h2}>{returned[i][0]}</p>);
-            arr3.push(<p classNamme = {styles.h2}>{returned[i][2]}</p>);
-            arr4.push(<p classNamme = {styles.h2}>{returned[i][3]}</p>);
-            arr5.push(<p classNamme = {styles.h2}>{returned[i][4]}</p>);
+            arr1.push(<p className = {styles.element}>{returned[i][1]}</p>);
+            arr2.push(<p className = {styles.element}>{returned[i][0]}</p>);
+            arr3.push(<p className = {styles.element}>{returned[i][2]}</p>);
+            arr4.push(<p className = {styles.element}>{returned[i][3]}</p>);
+            arr5.push(<p className = {styles.element}>{returned[i][4]}</p>);
         }
     }
 

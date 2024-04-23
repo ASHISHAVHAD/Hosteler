@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 .body {
-    margin-top: 15vh;
+    margin-top: 10vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,19 +13,30 @@
 .title {
     font-size: 5vh;
     margin-bottom: 0;
+    @media (max-aspect-ratio: 1 ) {
+        font-size: 4vh;
+    }
 }
 
 .infoBlock {
     background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(37,145,251,0.98) 0.1%, rgba(0,7,128,1) 99.8% );
-    width: 80vw;
+    width: 100vw;
     color: white;
     padding: 3vh;
-    border-radius: 3vh;
     display: grid;
-    grid-template-columns: 35% 30% 30%;
+    grid-template-columns: 40% 30% 30%;
     column-gap: 2vw;
     padding-left: 3vw;
     box-sizing: border-box;
+    font-size: 2vh;
+    @media (max-aspect-ratio: 1 ) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1vh;
+        justify-content: center;
+        width: 100vw;
+    }
 }
 
 iframe {
@@ -33,6 +44,21 @@ iframe {
     border-radius: 1vh;
     height: 30vh;
     width: 20vw;
+    @media (max-aspect-ratio: 1 ) {
+        height: 20vh;
+        width: 60vw;
+    }
+}
+
+.info {
+    @media (max-aspect-ratio: 1 ) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1vh;
+        justify-content: center;
+        overflow: hidden;
+    }
 }
 
 .roomsBlock {
@@ -40,10 +66,12 @@ iframe {
     flex-direction: column;
     width: 80vw;
     row-gap: 5vh;
-    padding-top: 5vh;
     align-items: center;
     box-sizing: border-box;
     padding-bottom: 5vh;
+    @media (max-aspect-ratio: 1 ) {
+        width: 100vw;
+    }
 }
 
 .hostelImage {
@@ -53,21 +81,38 @@ iframe {
     height: 30vh;
     overflow: hidden;
     border-radius: 1.5vh;
+    @media (max-aspect-ratio: 1 ) {
+        height: 20vh;
+    }
 }
 
 .image {
-    width: 30vw;
+    width: 40vw;
 }
 
 .roomTitle {
     background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(37,145,251,0.98) 0.1%, rgba(0,7,128,1) 99.8% );
     padding: 2vh;
     color: white;
-    border-radius: 1.5vh;
     position: -webkit-sticky;
     position: sticky;
     top: 10vh;
-    width: 80vw;
+    width: 100vw;
     box-sizing: border-box;
     padding-left: 3vw;
+    font-size: 3vh;
+    margin: 0;
+    @media (max-aspect-ratio: 1 ) {
+        font-size: 3vh;
+    }
+}
+
+.address {
+    font-weight: normal;
+    font-size: 2.5vh;
+    margin: 0;
+}
+
+.mobile {
+    margin: 0;
 }

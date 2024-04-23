@@ -9,16 +9,38 @@ import dashboard from '../Images/dashboard.png';
 import logout from '../Images/log-out.png';
 import plus from '../Images/plus.png';
 import userSmall from '../Images/userSmall.png';
-
+import UserQueries from './UserQueries';
 
 const Dashboard = () => {
 
     function logoutFun() {
         localStorage.removeItem('token');
-        console.log(localStorage.getItem('token'));
-        window.location.reload();
+        localStorage.removeItem('user');
         window.location.href = "/nav/login/*";
     }
+
+    if(localStorage.getItem('user') != null) {
+        return(
+            <div class = {styles.body}>
+                <div className = {styles.dashboardTitleBlock} >
+                    <img src = {user} className = {styles.user} />
+                    <Link to = "/nav/dashboard/userProfile/" className = {styles.dashboardOption}>
+                        <img src = {userSmall} className = {styles.smallLogos} />Profile
+                    </Link>
+                    <Link to = "/nav/dashboard/userQueries/" className = {styles.dashboardOption}>
+                        <img src = {circle} className = {styles.smallLogos} />Queries
+                    </Link>
+                    <h3 className = {styles.dashboardOption} style = {{marginTop: '10vh'}} onClick = {logoutFun} >
+                        <img src = {logout} className = {styles.smallLogos} />Logout
+                    </h3>
+                </div>
+                <div>
+                    <Outlet />
+                </div>
+            </div>
+        )
+        
+    } 
 
     return (
         <div class = {styles.body}>

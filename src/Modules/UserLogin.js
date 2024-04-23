@@ -8,12 +8,24 @@ const UserLogin = () => {
 
     let [loggedIn, setLoggedIn] = useState(false);
 
+    function removeErrorMessage(errorElement) {
+        document.getElementById(errorElement).innerHTML = "";
+    }
+
+    function validateEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
 
     function submitHandler () {
         
         const email = document.getElementById('email').value;
         const password = document.getElementById('password').value;
-        console.log(email);
+
+        if(!validateEmail(email)) {
+            document.getElementById("emailError").innerHTML = "Enter valid email id";
+            return false;
+        }
 
         if(email != '' && password != '') {
             $.ajax ({
@@ -41,16 +53,21 @@ const UserLogin = () => {
     if(localStorage.getItem('user') == null && localStorage.getItem('token') == null) {
         return (
             <div className = {styles.body}>
-                <img src = {LoginImage} className = {styles.RegisterImage}/>
+                <div className = {styles.imageContainer}>
+                    <img src = {LoginImage} className = {styles.RegisterImage}/>
+                </div>
                 <div className = {styles.outbox}>
                     <h1 className = {styles.title}>
                         User Login
                     </h1>
                     <label className = {styles.labels}>Email</label>
-                    <input type = "email" className = {styles.inputField} id = 'email'/>
+                    <input type = "email" className = {styles.inputField} id = 'email' onChange={() => removeErrorMessage("emailError")}/>
+                    <span id = "emailError" className = {styles.error}></span>
                     <label className = {styles.labels}>Password</label>
-                    <input type = "password" className = {styles.inputField} id = 'password'/>
+                    <input type = "password" className = {styles.inputField} id = 'password' onChange={() => removeErrorMessage("passwordError")}/>
+                    <span id = "passwordError" className = {styles.error}></span>
                     <button className = {styles.send} onClick = {submitHandler}>Login</button>
+                    <Link to = '/nav/login/*'className = {styles.error}>Click here to login as <strong>Hostel</strong></Link>
                 </div>
             </div>
         )
@@ -59,10 +76,12 @@ const UserLogin = () => {
     else {
         return (
             <div className = {styles.body}>
-                <img src = {LoginImage} className = {styles.RegisterImage}/>
+                <div className = {styles.imageContainer}>
+                    <img src = {LoginImage} className = {styles.RegisterImage}/>
+                </div>
                 <div className = {styles.outbox}>
                     <h1 className = {styles.title}>Logged In Successfully!</h1>
-                    <Link to = {'/nav/dashboard/' + localStorage.getItem('token')} className = {styles.gotodash} >Go To Dashboard</Link>
+                    <Link to = {'/nav/dashboard/userProfile/' + localStorage.getItem('user')} className = {styles.gotodash} >Go To Dashboard</Link>
                 </div>
             </div>
         )

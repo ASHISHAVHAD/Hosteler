@@ -51,9 +51,9 @@ function HostelPage(props) {
             <div className = {styles.infoBlock}>
                 <div className = {styles.info}>
                     <h1 id = "name" className = {styles.title}>Name</h1>
-                    <h2 id = "address" style = {{fontWeight : 'normal'}}>Location</h2>
-                    <p id = "mobile">Mobile</p>
-                    <p id = "email">Email</p>
+                    <h2 id = "address" className = {styles.address}>Location</h2>
+                    <p id = "mobile" className = {styles.mobile}>Mobile</p>
+                    <p id = "email" className = {styles.mobile}>Email</p>
                 </div>
                 <div className = {styles.hostelImage} >
                     <img src={`data:image/jpeg;base64,${imageData}`} class = {styles.image}/>

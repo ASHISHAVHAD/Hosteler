@@ -18,9 +18,22 @@
     padding-right: 2vw;
 }
 
+@media (max-aspect-ratio: 1 ) {
+    .navbar {
+        display: flex;
+    }
+}
+
 .title {
     color: #F93943;
     margin: 0;
+    font-size: 5vh;
+}
+
+@media (max-aspect-ratio: 1 ) {
+    .title {
+        font-size: 2.5vh;
+    }
 }
 
 .logo {
@@ -29,12 +42,18 @@
     user-select: none;
 }
 
+@media (max-aspect-ratio: 1 ) {
+    .logo {
+        height: 5vh;
+    }
+}
+
 .options {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     margin: 1vw;
-    height: 2vw;
+    height: 4vh;
     user-select: none;
     text-decoration: none;
     color: rgb(26, 26, 26);
@@ -44,6 +63,7 @@
     background-color: #F93943;
     border-radius: 0.25vh;
     box-sizing: border-box;
+    transition: background-color 0.2s ease-in-out;
 }
 
 .options:hover {
@@ -54,7 +74,7 @@
 }
 
 .logged {
-    height: 2vw;
+    height: 4vh;
     display: inline-flex;
     align-items: center;
     border: 2px solid #F93943;
@@ -65,6 +85,7 @@
     justify-content: center;
     cursor: pointer;
     text-decoration: none;
+    font-size: 2vh;
 }
 
 .logged:hover {
@@ -72,6 +93,7 @@
     .userName {
         color: rgb(26, 26, 26);
     }
+    transition: background-color 0.2s ease-in-out;
 }
 
 .userLogo {
