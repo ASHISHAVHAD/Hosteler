@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 .outbox {
+    background-color: white;
     display: flex;
     flex-direction: row;
     width: 60vw;
@@ -11,7 +12,7 @@
     font-family: "Poppins", sans-serif;
     box-sizing: border-box;
     align-items: center;
-    box-shadow: 0 0 0.5vh black;
+    border: 0.3vh solid black;
 }
 
 @media (max-aspect-ratio: 1 ) {
@@ -91,7 +92,7 @@
 .location {
     color: black;
     font-weight: normal;
-    font-size: 2.5vh;
+    font-size: 2.0vh;
     margin-top: 0;
     margin-bottom: 0;
     @media (max-aspect-ratio: 1 ) {
@@ -102,13 +103,14 @@
 .name {
     color: black;
     margin-bottom: 0;
-    font-size: 3vh;
+    font-size: 4vh;
     margin-top: 0;
 }
 
 .mobile {
     color: black;
     font-size: 2vh;
+    margin: 0;
     @media (max-aspect-ratio: 1 ) {
         margin: 0;
     }

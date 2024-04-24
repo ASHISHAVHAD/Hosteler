@@ -6,6 +6,12 @@
     padding: 5vh;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+    background-color: #E0EAED;
+    @media (max-aspect-ratio: 1 ) {
+        height: fit-content;
+        width: 100vw;
+        padding: 2vh;
+    }
 }
 
 .outbox {
@@ -24,12 +30,18 @@
     box-sizing: border-box;
     margin-left: 0;
     margin-top: 0;
+    font-size: 2vh;
+    @media (max-aspect-ratio: 1 ) {
+        padding: 2vh;
+        margin: 2vh;
+    }
 }
 
 .title {
     margin-top: 0;
     font-family: "Poppins", sans-serif;
     user-select: none;
+    font-size: 3vh;
 }
 
 .queriesBox {
@@ -41,6 +53,13 @@
     padding: 3vh;
     box-sizing: border-box;
     padding-left: 0;
+    @media (max-aspect-ratio: 1 ) {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        width: 90vw;
+        padding: 0;
+        align-items: center;
+    }
 }
 
 .reply {
@@ -69,6 +88,10 @@
     display: none;
     height: 5vh;
     font-family: "Poppins", sans-serif;
+    font-size: 2vh;
+    @media (max-aspect-ratio: 1 ) {
+        width: 70vw;
+    }
 }
 
 .message {

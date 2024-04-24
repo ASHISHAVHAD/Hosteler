@@ -2,8 +2,13 @@ import styles from './Navbar.module.css';
 import logo from './hostel.png';
 import userIcon from './user.png';
 import { Outlet, Link } from "react-router-dom";
+import menulogo from "./menu-bar.png";
+import cancel from './cancelButton.png';
+import { useState } from 'react';
 
 const Navbar = (props) => {
+
+    const [menuOpen, setMenuOpen] = useState(false);
 
     function logout() {
         localStorage.removeItem('token');
@@ -11,6 +16,19 @@ const Navbar = (props) => {
         window.location.href = '/nav/userLogin/*';
     }
     
+    function menuPop() {
+        if(!menuOpen) {
+            document.getElementById("menuBlock").style.display = 'flex';
+            document.getElementById("menuClick").src = cancel;
+            setMenuOpen(true);
+        }
+        else {
+            document.getElementById("menuBlock").style.display = 'none';
+            document.getElementById("menuClick").src = menulogo;
+            setMenuOpen(false);
+        }  
+    }
+
     if(localStorage.getItem('token') != null || localStorage.getItem('user') != null) {
 
         var user = localStorage.getItem('token');
@@ -19,14 +37,29 @@ const Navbar = (props) => {
                 <div className = {styles.navbar}>
                     <img src = {logo} class = {styles.logo}></img>
                     <h1 className = {styles.title}>HosteLife</h1>
-                    <Link to = '/' className = {styles.options}>Home</Link>
-                    <Link to = '/nav/hostels/*' className = {styles.options}>Hostels</Link>
-                    <Link to = '/nav/contact/*' className = {styles.options}>Contact Us</Link>
-                    <Link to = {'/nav/dashboard/dashboardDefault/'}  className = {styles.logged}>
-                        <img src = {userIcon} className = {styles.userLogo} />
-                        <h1 className = {styles.userName} >Dashboard</h1>
-                    </Link>
-                    <Link to = "/nav/login/" className = {styles.options} style = {{cursor: 'pointer'}} onClick = {logout}>Logout</Link>
+                    <div className = {styles.menuBlock} >
+                        <Link to = '/' className = {styles.options}>Home</Link>
+                        <Link to = '/nav/hostels/*' className = {styles.options}>Hostels</Link>
+                        <Link to = '/nav/contact/*' className = {styles.options}>Contact Us</Link>
+                        <Link to = {'/nav/dashboard/dashboardDefault/'}  className = {styles.logged}>
+                            <img src = {userIcon} className = {styles.userLogo} />
+                            <h1 className = {styles.userName} >Dashboard</h1>
+                        </Link>
+                        <Link to = "/nav/login/" className = {styles.options} style = {{cursor: 'pointer'}} onClick = {logout}>Logout</Link>
+                    </div>
+                    <div className = {styles.menuBlockMobile} >
+                        <img src = {menulogo} className = {styles.menuLogo} id = "menuClick" onClick = {menuPop}/>
+                    </div>
+                    <div className = {styles.menu} id = "menuBlock">
+                        <Link to = '/' className = {styles.options}>Home</Link>
+                        <Link to = '/nav/hostels/*' className = {styles.options}>Hostels</Link>
+                        <Link to = '/nav/contact/*' className = {styles.options}>Contact Us</Link>
+                        <Link to = {'/nav/dashboard/dashboardDefault/'}  className = {styles.logged}>
+                            <img src = {userIcon} className = {styles.userLogo} />
+                            <h1 className = {styles.userName} >Dashboard</h1>
+                        </Link>
+                        <Link to = "/nav/login/" className = {styles.options} style = {{cursor: 'pointer'}} onClick = {logout}>Logout</Link>
+                    </div>
                 </div>
                 <Outlet className = {styles.outlet}/>
             </div>
@@ -37,11 +70,23 @@ const Navbar = (props) => {
             <div className = {styles.navbar}>
                 <img src = {logo} class = {styles.logo}></img>
                 <h1 className = {styles.title}>HosteLife</h1>
-                <Link to = '/' className = {styles.options}>Home</Link>
-                <Link to = '/nav/hostels/*' className = {styles.options}>Hostels</Link>
-                <Link to = '/nav/contact/*' className = {styles.options}>Contact Us</Link>
-                <Link to = '/nav/userRegister/*'className = {styles.options}>Register</Link>
-                <Link to = '/nav/userLogin/*' className = {styles.options}>Login</Link>
+                <div className = {styles.menuBlock} >
+                    <Link to = '/' className = {styles.options}>Home</Link>
+                    <Link to = '/nav/hostels/*' className = {styles.options}>Hostels</Link>
+                    <Link to = '/nav/contact/*' className = {styles.options}>Contact Us</Link>
+                    <Link to = '/nav/userRegister/*'className = {styles.options}>Register</Link>
+                    <Link to = '/nav/userLogin/*' className = {styles.options}>Login</Link>
+                </div>
+                <div className = {styles.menuBlockMobile} >
+                        <img src = {menulogo} className = {styles.menuLogo} id = "menuClick" onClick = {menuPop}/>
+                </div>
+                <div className = {styles.menu} id = "menuBlock">
+                    <Link to = '/' className = {styles.options}>Home</Link>
+                    <Link to = '/nav/hostels/*' className = {styles.options}>Hostels</Link>
+                    <Link to = '/nav/contact/*' className = {styles.options}>Contact Us</Link>
+                    <Link to = '/nav/userRegister/*'className = {styles.options}>Register</Link>
+                    <Link to = '/nav/userLogin/*' className = {styles.options}>Login</Link>
+                </div>    
             </div>
             <Outlet className = {styles.outlet}/>
         </div>
