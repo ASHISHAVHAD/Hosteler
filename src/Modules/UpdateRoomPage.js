@@ -12,7 +12,7 @@ const UpdateRoomPage = () => {
 
     if(isLoading) {
         $.ajax ({
-        url : "http://localhost/wt/roomInfo.php",
+        url : "roomInfo.php",
         type : 'GET',
         data : {
             'email' : user,

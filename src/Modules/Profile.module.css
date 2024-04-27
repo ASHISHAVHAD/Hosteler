@@ -6,7 +6,10 @@
     user-select: none;
     width: 80vw;
     background-color: #E0EAED;
-    @media (max-aspect-ratio: 1 ) {
+}
+
+@media (max-aspect-ratio: 1 ) {
+    .body {
         height: fit-content;
         width: 100vw;
         padding: 2vh;
@@ -24,7 +27,10 @@
     display: flex;
     flex-direction: column;
     font-family: "Poppins", sans-serif;
-    @media (max-aspect-ratio: 1 ) {
+}
+
+@media (max-aspect-ratio: 1 ) {
+    .addRoomForm {
         width: 90vw;
         padding: 2vh;
         margin-bottom: 3vh;
@@ -43,12 +49,15 @@
     flex-direction: column;
     font-family: "Poppins", sans-serif;
     height: fit-content;
-    @media (max-aspect-ratio: 1 ) {
-        width: 90vw;
-        box-sizing: border-box;
-        padding: 2vh;
-        margin-bottom: 5vh;
-    }
+}
+
+@media (max-aspect-ratio: 1 ) {
+        .updateRoomForm {
+            width: 90vw;
+            box-sizing: border-box;
+            padding: 2vh;
+            margin-bottom: 5vh;
+        } 
 }
 
 .title {
@@ -61,12 +70,16 @@
 .grid {
     display: grid;
     grid-template-columns: auto auto;
-    column-gap: 2vw;
-    @media (max-aspect-ratio: 1 ) {
+    column-gap: 2vw; 
+}
+
+@media (max-aspect-ratio: 1 ) {
+    .grid {
+        width: 90vw;
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
+    }   
 }
 
 .addRoomTitle {
@@ -83,7 +96,10 @@
     border: none;
     border-radius: 0.3vh;
     width: 20vw;
-    @media (max-aspect-ratio: 1 ) {
+}
+
+@media (max-aspect-ratio: 1 ) {
+    .inputField {
         width: 80vw;
     }
 }
@@ -104,9 +120,12 @@
     background-size: 200% auto;
     transition: 0.5s;
     border-radius: 0.5vh;
-    @media (max-aspect-ratio: 1 ) {
+}
+
+@media (max-aspect-ratio: 1 ) {
+    .addRoomButton {
         width: fit-content;
-    }
+    }   
 }
 
 .addRoomButton:hover {
@@ -118,16 +137,22 @@
 
 .image {
     width: 20vw;
-    @media (max-aspect-ratio: 1 ) {
+}
+
+@media (max-aspect-ratio: 1 ) {
+    .image {
         width: 80vw;
-    }
+    } 
 }
 
 .roomImage {
     height: 20vh;
     width: 20vw;
     overflow: hidden;
-    @media (max-aspect-ratio: 1 ) {
+}
+
+@media (max-aspect-ratio: 1 ) {
+    .roomImage {
         width: 80vw;
         height: 20vh;
     }

@@ -29,18 +29,24 @@
     display: grid;
     grid-template-columns: auto auto auto auto auto;
     align-items: center;
-    @media (max-aspect-ratio: 1 ) {
+}
+
+@media (max-aspect-ratio: 1 ) {
+    .menuBlock {
         display: none;
     }
 }
 
 .menuBlockMobile {
     display: none;
-    @media (max-aspect-ratio: 1 ) {
+}
+
+@media (max-aspect-ratio: 1 ) {
+    .menuBlockMobile {
         display: flex;
         align-items: center;
         justify-content: center;
-    }
+    }  
 }
 
 .menuLogo {
@@ -144,7 +150,10 @@
 .userLogo {
     height: 1.5vw;
     margin-right: 5px;
-    @media (max-aspect-ratio: 1 ) {
+}
+
+@media (max-aspect-ratio: 1 ) {
+    .userLogo {
         height: 3vh;
     }
 }

@@ -12,7 +12,7 @@ const UserQueries = () => {
 
     if(loading) {
         $.ajax({
-            url : 'http://localhost/wt/handleQuery.php',
+            url : 'handleQuery.php',
             type : 'POST',
             data : {
                 'type' : 'recieve',

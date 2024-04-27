@@ -13,7 +13,10 @@
     -webkit-box-shadow: 0 0 10px black;
     box-shadow: 0 0 5px black;
     transition: background-color 0.3s ease-in-out;
-    @media (max-aspect-ratio: 1 ) {
+}
+
+@media (max-aspect-ratio: 1 ) {
+    .outbox {
         width: 90vw;
         display: flex;
         flex-direction: column;
@@ -49,15 +52,24 @@
     overflow: hidden;
     border: 2px solid rgb(196, 196, 196);
     border-radius: 1.5vh;
-    @media (max-aspect-ratio: 1 ) {
+}
+
+@media (max-aspect-ratio: 1 ) {
+    .imagediv {
         height: 15vh;
         width: 60vw;
         margin-bottom: 2vh;
-    }
+    }  
 }
 
 .image {
-    width: 70vw;
+    width: 18vw;
+}
+
+@media (max-aspect-ratio: 1 ) {
+    .image {
+        width: 70vw;
+    }
 }
 
 .infoBlock {
@@ -65,7 +77,10 @@
     justify-content: center;
     flex-direction: column;
     font-family: "Poppins", sans-serif;
-    @media (max-aspect-ratio: 1 ) {
+}
+
+@media (max-aspect-ratio: 1 ) {
+    .infoBlock {
         width: 70vw;
     }
 }
@@ -75,7 +90,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    @media (max-aspect-ratio: 1 ) {
+}
+
+@media (max-aspect-ratio: 1 ) {
+    .buttonBlock {
         flex-direction: row;
         padding: 2vh;
     }
@@ -114,7 +132,10 @@
     transition: background-color 0.3s ease-in-out;
     font-size: 1.8vh;
     padding: 1vh;
-    @media (max-aspect-ratio: 1 ) {
+}
+
+@media (max-aspect-ratio: 1 ) {
+    .button {
         margin: 1vh;
     }
 }

@@ -29,7 +29,7 @@ const Home = () => {
             <div className = {styles.welcomeBox}>
                 <div className = {styles.welcomeText}>
                     <h1 className = {styles.title}>Find The Perfect Hostel</h1>
-                    <Link to = "/nav/hostels/" className = {styles.welcomePara}>
+                    <Link to = "/nav/hostels" className = {styles.welcomePara}>
                         Explore
                         <img src = {arrow} className = {styles.arrow} />
                     </Link>

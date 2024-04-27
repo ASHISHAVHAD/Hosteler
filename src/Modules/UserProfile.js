@@ -5,7 +5,7 @@ import { useState } from 'react';
 const UserProfile = () => {
 
     $.ajax({
-        url : "http://localhost/wt/userProfile.php",
+        url : "userProfile.php",
         type : 'POST',
         data : {
             'type' : 'profile',
@@ -22,7 +22,7 @@ const UserProfile = () => {
 
     function updateProfile() {
         $.ajax({
-            url : "http://localhost/wt/userProfile.php",
+            url : "userProfile.php",
             type : 'POST',
             data : {
                 'type' : 'profileUpdate',

@@ -7,7 +7,10 @@
     overflow: scroll;
     column-gap: 5vw;
     background-color: #E0EAED;
-    @media (max-aspect-ratio: 1 ) {
+}
+
+@media (max-aspect-ratio: 1 ) {
+    .body {
         width: 100vw;
         flex-direction: column;
         padding: 2vw;

@@ -37,7 +37,7 @@ const QueryModule = (props) => {
     function sendMessage() {
 
         $.ajax({
-            url : 'http://localhost/wt/handleQuery.php',
+            url : 'handleQuery.php',
             type : 'POST',
             data : {
                 'type' : 'send',
@@ -60,7 +60,7 @@ const QueryModule = (props) => {
 
     function deleteFunction () {
         $.ajax({
-            url : 'http://localhost/wt/handleQuery.php',
+            url : 'handleQuery.php',
             type : 'POST',
             data : {
                 'type' : 'delete',

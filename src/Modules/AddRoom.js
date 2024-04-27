@@ -22,7 +22,7 @@ const addRoom = () => {
 
         $.ajax({
             type : 'POST',
-            url : 'http://localhost/wt/dashboard.php',
+            url : 'dashboard.php',
             data : formData,
             contentType: false,
             processData: false,

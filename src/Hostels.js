@@ -17,7 +17,7 @@ const Hostels = () => {
     if(isLoading) {
         $.ajax({
             type : 'POST',
-            url : 'http://localhost/wt/hostelList.php',
+            url : 'hostelList.php',
             data : {
                 
             },

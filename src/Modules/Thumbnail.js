@@ -8,7 +8,7 @@ function Thumbnail(props) {
     const [imageData, setImageData] = useState('');
 
     $.ajax({
-        url: 'http://localhost/wt/imageGet.php',
+        url: 'imageGet.php',
         type: 'POST',
         data: { 'id' : props.id1 },
         success: function (response) {
@@ -16,7 +16,6 @@ function Thumbnail(props) {
         },
         error: function (xhr, status, error) {
             console.error('Error retrieving image:', error);
-            alert('Error retrieving image');
         }
     });
     

@@ -76,7 +76,7 @@ const Register = () => {
 
         $.ajax({
             type : 'POST',
-            url : 'http://localhost/wt/userRegistration.php',
+            url : 'userRegistration.php',
             data : formData,
             contentType: false,
             processData: false,
@@ -137,7 +137,7 @@ const Register = () => {
                 <label className = {styles.labels}>Image</label>
                 <input type = "file"  accept="image/*" className = {styles.inputField} onChange={handleImageChange} id = "thumbnail"/>
                 <button className = {styles.send} onClick={Registration}>Register</button>
-                <Link to = '/nav/userRegister/*'className = {styles.error}>Click here to register as <strong>Student</strong></Link>
+                <Link to = '/nav/userRegister'className = {styles.error}>Click here to register as <strong>Student</strong></Link>
             </div>
         </div>
     )

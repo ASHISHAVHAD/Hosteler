@@ -15,7 +15,7 @@ const RoomTemplate = (props) => {
     const saveButton = useRef();
 
     $.ajax({
-        url: 'http://localhost/wt/roomImage.php',
+        url: 'roomImage.php',
         type: 'POST',
         data: { 'roomid' : props.arr[5] },
         success: function (response) {
@@ -48,7 +48,7 @@ const RoomTemplate = (props) => {
         const reciever = window.location.href.split('/')[5];
 
         $.ajax({
-            url : 'http://localhost/wt/handleQuery.php',
+            url : 'handleQuery.php',
             type : 'POST',
             data : {
                 'type' : 'send',
@@ -71,7 +71,7 @@ const RoomTemplate = (props) => {
 
     function save() {
         $.ajax({
-            url: 'http://localhost/wt/handleQuery.php',
+            url: 'handleQuery.php',
             type: 'POST',
             data: { 
                 'type' : 'save',

@@ -20,7 +20,7 @@ const Dashboard = () => {
     function logoutFun() {
         localStorage.removeItem('token');
         localStorage.removeItem('user');
-        window.location.href = "/nav/login/*";
+        window.location.href = "/nav/login";
     }
 
     function displayMenu() {
@@ -45,10 +45,10 @@ const Dashboard = () => {
                 </div>
                 <div className = {styles.dashboardTitleBlock} id = "dashboardMenu">
                     <img src = {user} className = {styles.user} />
-                    <Link to = "/nav/dashboard/userProfile/" className = {styles.dashboardOption}>
+                    <Link to = "/nav/dashboard/userProfile" className = {styles.dashboardOption}>
                         <img src = {userSmall} className = {styles.smallLogos} />Profile
                     </Link>
-                    <Link to = "/nav/dashboard/userQueries/" className = {styles.dashboardOption}>
+                    <Link to = "/nav/dashboard/userQueries" className = {styles.dashboardOption}>
                         <img src = {circle} className = {styles.smallLogos} />Queries
                     </Link>
                     <h3 className = {styles.dashboardOptionLogout} onClick = {logoutFun} >
@@ -71,19 +71,19 @@ const Dashboard = () => {
             </div>
             <div className = {styles.dashboardTitleBlock} id = "dashboardMenu" >
                 <img src = {user} className = {styles.user} />
-                <Link to = "/nav/dashboard/dashboardDefault/" className = {styles.dashboardOption}>
+                <Link to = "/nav/dashboard/dashboardDefault" className = {styles.dashboardOption}>
                     <img src = {dashboard} className = {styles.smallLogos} />Overview
                 </Link>
-                <Link to = "/nav/dashboard/profile/" className = {styles.dashboardOption}>
+                <Link to = "/nav/dashboard/profile" className = {styles.dashboardOption}>
                     <img src = {userSmall} className = {styles.smallLogos} />Profile
                 </Link>
-                <Link to = "/nav/dashboard/queries/" className = {styles.dashboardOption}>
+                <Link to = "/nav/dashboard/queries" className = {styles.dashboardOption}>
                     <img src = {circle} className = {styles.smallLogos} />Queries
                     </Link>
-                <Link to = "/nav/dashboard/addRoom/" className = {styles.dashboardOption}>
+                <Link to = "/nav/dashboard/addRoom" className = {styles.dashboardOption}>
                     <img src = {plus} className = {styles.smallLogos} />Add Room
                 </Link>
-                <Link to = "/nav/dashboard/updateRoom/" className = {styles.dashboardOption}>
+                <Link to = "/nav/dashboard/updateRoom" className = {styles.dashboardOption}>
                     <img src = {arrow} className = {styles.smallLogos} />Update Room
                 </Link>
                 <h3 className = {styles.dashboardOptionLogout} onClick = {logoutFun} >

@@ -9,7 +9,7 @@ const Contact = () => {
 
     function sendQuery() {
         $.ajax({
-            url : "http://localhost/wt/queries.php",
+            url : "queries.php",
             type : 'post',
             data : {
                 'name' : document.getElementById('name').value,

@@ -64,7 +64,7 @@ const UserRegistration = () => {
 
         $.ajax({
             type : 'POST',
-            url : 'http://localhost/wt/studentRegistration.php',
+            url : 'studentRegistration.php',
             data : formData,
             contentType: false,
             processData: false,
@@ -113,7 +113,7 @@ const UserRegistration = () => {
                 <input type = "password" className = {styles.inputField} id = 'confirmPassword' onChange={() => removeErrorMessage("passwordError")}/>
                 <span id = "passwordError" className = {styles.error}></span>
                 <button className = {styles.send} onClick={Registration}>Register</button>
-                <Link to = '/nav/register/*'className = {styles.error}>Click here to register as <strong>Hostel</strong></Link>
+                <Link to = '/nav/register'className = {styles.error}>Click here to register as <strong>Hostel</strong></Link>
             </div>
         </div>
     )

@@ -30,7 +30,7 @@ const UserLogin = () => {
         if(email != '' && password != '') {
             $.ajax ({
                 type : 'POST',
-                url : 'http://localhost/wt/studentRegistration.php',
+                url : 'studentRegistration.php',
                 data : {
                     'type' : 'login',
                     'email' : email,
@@ -50,7 +50,7 @@ const UserLogin = () => {
         }
     }
 
-    if(localStorage.getItem('user') == null && localStorage.getItem('token') == null) {
+    if(localStorage.getItem('user') == null) {
         return (
             <div className = {styles.body}>
                 <div className = {styles.imageContainer}>
@@ -67,7 +67,7 @@ const UserLogin = () => {
                     <input type = "password" className = {styles.inputField} id = 'password' onChange={() => removeErrorMessage("passwordError")}/>
                     <span id = "passwordError" className = {styles.error}></span>
                     <button className = {styles.send} onClick = {submitHandler}>Login</button>
-                    <Link to = '/nav/login/*'className = {styles.error}>Click here to login as <strong>Hostel</strong></Link>
+                    <Link to = '/nav/login' className = {styles.error}>Click here to login as <strong>Hostel</strong></Link>
                 </div>
             </div>
         )
@@ -81,7 +81,7 @@ const UserLogin = () => {
                 </div>
                 <div className = {styles.outbox}>
                     <h1 className = {styles.title}>Logged In Successfully!</h1>
-                    <Link to = {'/nav/dashboard/userProfile/' + localStorage.getItem('user')} className = {styles.gotodash} >Go To Dashboard</Link>
+                    <Link to = '/nav/dashboard/userProfile' className = {styles.gotodash} >Go To Dashboard</Link>
                 </div>
             </div>
         )

@@ -63,20 +63,26 @@
     width: 30vw;
     box-sizing: border-box;
     overflow: hidden;
-    @media (max-aspect-ratio: 1 ) {
+}
+
+@media (max-aspect-ratio: 1 ) {
+    .rightbox {
         width: 90vw;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         height: fit-content;
-    }
+    }   
 }
 
 .map {
     height: 20vh;
     width: 15vw;
-    @media (max-aspect-ratio: 1 ) {
+}
+
+@media (max-aspect-ratio: 1 ) {
+    .map {
         height: 15vh;
         width: 70vw;
     }
@@ -84,7 +90,10 @@
 
 .image {
     width: 17vw;
-    @media (max-aspect-ratio: 1 ) {
+}
+
+@media (max-aspect-ratio: 1 ) {
+    .image {
         width: 80vw;
     }
 }
@@ -95,8 +104,11 @@
     font-size: 2.0vh;
     margin-top: 0;
     margin-bottom: 0;
-    @media (max-aspect-ratio: 1 ) {
-        font-size: 1.9vh;
+}
+
+@media (max-aspect-ratio: 1 ) {
+    .location {
+        font-size: 1.9vh;        
     }
 }
 
@@ -111,7 +123,10 @@
     color: black;
     font-size: 2vh;
     margin: 0;
-    @media (max-aspect-ratio: 1 ) {
+}
+
+@media (max-aspect-ratio: 1 ) {
+    .mobile {
         margin: 0;
     }
 }

@@ -14,7 +14,7 @@ import $ from 'jquery';
       formData.append('image', image);
 
       $.ajax({
-        url: 'http://localhost/wt/imageStore.php',
+        url: 'imageStore.php',
         type: 'POST',
         data: formData,
         contentType: false,

@@ -29,21 +29,21 @@ root.render(
       <Routes>
         <Route index element = {<Home/>} />
         <Route path="/nav/" element={<Navbar />}>
-          <Route path = "/nav/hostels/*" element = {<Hostels/>}/>
+          <Route path = "/nav/hostels" element = {<Hostels/>}/>
           <Route path = "/nav/hostelPage/*" element = {<HostelPage/>} />
-          <Route path = "/nav/contact/*" element = {<Contact/>} />
-          <Route path = "/nav/register/*" element = {<Register/>} />
-          <Route path = "/nav/userRegister/*" element = {<UserRegistration/>} />
-          <Route path = "/nav/login/*" element = {<Login/>} />
-          <Route path = "/nav/userLogin/*" element = {<UserLogin/>} />
-          <Route path = "/nav/dashboard/" element = {<Dashboard/>} >
-            <Route path = "/nav/dashboard/dashboardDefault/*" element = {<DashboardDefault />} />
-            <Route path = "/nav/dashboard/addRoom/*" element = {<AddRoom />} />
-            <Route path = "/nav/dashboard/profile/*" element = {<Profile />} />
-            <Route path = "/nav/dashboard/userProfile/*" element = {<UserProfile />} />
-            <Route path = "/nav/dashboard/queries/*" element = {<Queries />} />
-            <Route path = "/nav/dashboard/userQueries/*" element = {<UserQueries />} />
-            <Route path = "/nav/dashboard/updateRoom/*" element = {<UpdateRoomPage />} />
+          <Route path = "/nav/contact" element = {<Contact/>} />
+          <Route path = "/nav/register" element = {<Register/>} />
+          <Route path = "/nav/userRegister" element = {<UserRegistration/>} />
+          <Route path = "/nav/login" element = {<Login/>} />
+          <Route path = "/nav/userLogin" element = {<UserLogin/>} />
+          <Route path = "/nav/dashboard" element = {<Dashboard/>} >
+            <Route path = "/nav/dashboard/dashboardDefault" element = {<DashboardDefault />} />
+            <Route path = "/nav/dashboard/addRoom" element = {<AddRoom />} />
+            <Route path = "/nav/dashboard/profile" element = {<Profile />} />
+            <Route path = "/nav/dashboard/userProfile" element = {<UserProfile />} />
+            <Route path = "/nav/dashboard/queries" element = {<Queries />} />
+            <Route path = "/nav/dashboard/userQueries" element = {<UserQueries />} />
+            <Route path = "/nav/dashboard/updateRoom" element = {<UpdateRoomPage />} />
           </Route>
           <Route path = "/nav/image/*" element = {<ImageUpload/>} />
         </Route>

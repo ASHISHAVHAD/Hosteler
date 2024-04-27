@@ -15,7 +15,7 @@ function ImageRetriever() {
 
     const handleRetrieve = () => {
         $.ajax({
-        url: 'http://localhost/wt/imageGet.php',
+        url: 'imageGet.php',
         type: 'POST',
         data: { id: id },
         success: function (response) {

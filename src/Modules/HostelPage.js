@@ -15,7 +15,7 @@ function HostelPage(props) {
     const [isLoading, setIsLoading] = useState(true);
 
     $.ajax({
-        url: 'http://localhost/wt/imageGet.php',
+        url: 'imageGet.php',
         type: 'POST',
         data: { 'id' : user },
         success: function (response) {
@@ -28,7 +28,7 @@ function HostelPage(props) {
     });
 
     $.ajax ({
-        url : "http://localhost/wt/hostelInfo.php",
+        url : "hostelInfo.php",
         type : 'POST',
         data : {
             'email' : user,

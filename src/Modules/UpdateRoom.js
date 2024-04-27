@@ -15,7 +15,7 @@ const UpdateRoom = (props) => {
     const roomImage1 = useRef();
 
     $.ajax({
-        url: 'http://localhost/wt/roomImage.php',
+        url: 'roomImage.php',
         type: 'POST',
         data: { 'roomid' : props.arr[5] },
         success: function (response) {
@@ -52,7 +52,7 @@ const UpdateRoom = (props) => {
 
         $.ajax({
             type : 'POST',
-            url : 'http://localhost/wt/dashboard.php',
+            url : 'dashboard.php',
             data : formData,
             contentType: false,
             processData: false,

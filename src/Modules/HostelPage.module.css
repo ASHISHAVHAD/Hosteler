@@ -13,7 +13,10 @@
 .title {
     font-size: 5vh;
     margin-bottom: 0;
-    @media (max-aspect-ratio: 1 ) {
+}
+
+@media (max-aspect-ratio: 1 ) {
+    .title {
         font-size: 4vh;
     }
 }
@@ -29,14 +32,17 @@
     padding-left: 3vw;
     box-sizing: border-box;
     font-size: 2vh;
-    @media (max-aspect-ratio: 1 ) {
+}
+
+@media (max-aspect-ratio: 1 ) {
+    .infoBlock {
         display: flex;
         flex-direction: column;
         align-items: center;
         padding: 1vh;
         justify-content: center;
         width: 100vw;
-    }
+    }   
 }
 
 iframe {
@@ -44,14 +50,17 @@ iframe {
     border-radius: 1vh;
     height: 30vh;
     width: 20vw;
-    @media (max-aspect-ratio: 1 ) {
+}
+
+@media (max-aspect-ratio: 1 ) {
+    iframe {
         height: 20vh;
         width: 60vw;
     }
 }
 
-.info {
-    @media (max-aspect-ratio: 1 ) {
+@media (max-aspect-ratio: 1 ) {
+    .info {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -69,8 +78,11 @@ iframe {
     align-items: center;
     box-sizing: border-box;
     padding-bottom: 5vh;
-    @media (max-aspect-ratio: 1 ) {
-        width: 100vw;
+}
+
+@media (max-aspect-ratio: 1 ) {
+    .roomsBlock {
+        width: 100vw;        
     }
 }
 
@@ -81,7 +93,10 @@ iframe {
     height: 30vh;
     overflow: hidden;
     border-radius: 1.5vh;
-    @media (max-aspect-ratio: 1 ) {
+}
+
+@media (max-aspect-ratio: 1 ) {
+    .hostelImage {
         height: 20vh;
     }
 }
@@ -102,7 +117,10 @@ iframe {
     padding-left: 3vw;
     font-size: 3vh;
     margin: 0;
-    @media (max-aspect-ratio: 1 ) {
+}
+
+@media (max-aspect-ratio: 1 ) {
+    .roomTitle {
         font-size: 3vh;
     }
 }

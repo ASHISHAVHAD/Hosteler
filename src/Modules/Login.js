@@ -36,7 +36,7 @@ const Login = () => {
         if(email != '' && password != '') {
             $.ajax ({
                 type : 'POST',
-                url : 'http://localhost/wt/userRegistration.php',
+                url : 'userRegistration.php',
                 data : {
                     'type' : 'login',
                     'email' : email,
@@ -75,7 +75,7 @@ const Login = () => {
                     <input type = "password" className = {styles.inputField} id = 'password' onChange={() => removeErrorMessage("passwordError")}/>
                     <span id = "passwordError" className = {styles.error}></span>
                     <button className = {styles.send} onClick = {submitHandler}>Login</button>
-                    <Link to = '/nav/userLogin/*'className = {styles.error}>Click here to login as <strong>Student</strong></Link>
+                    <Link to = '/nav/userLogin'className = {styles.error}>Click here to login as <strong>Student</strong></Link>
                 </div>
             </div>
         )
@@ -89,7 +89,7 @@ const Login = () => {
                 </div>
                 <div className = {styles.outbox}>
                     <h1 className = {styles.title}>Logged In Successfully!</h1>
-                    <Link to = {'/nav/dashboard/dashboardDefault/' + localStorage.getItem('token')} className = {styles.gotodash} >Go To Dashboard</Link>
+                    <Link to = '/nav/dashboard/dashboardDefault' className = {styles.gotodash} >Go To Dashboard</Link>
                 </div>
             </div>
         )

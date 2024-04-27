@@ -39,26 +39,26 @@ const Navbar = (props) => {
                     <h1 className = {styles.title}>HosteLife</h1>
                     <div className = {styles.menuBlock} >
                         <Link to = '/' className = {styles.options}>Home</Link>
-                        <Link to = '/nav/hostels/*' className = {styles.options}>Hostels</Link>
-                        <Link to = '/nav/contact/*' className = {styles.options}>Contact Us</Link>
-                        <Link to = {'/nav/dashboard/dashboardDefault/'}  className = {styles.logged}>
+                        <Link to = '/nav/hostels' className = {styles.options}>Hostels</Link>
+                        <Link to = '/nav/contact' className = {styles.options}>Contact Us</Link>
+                        <Link to = {'/nav/dashboard/dashboardDefault'}  className = {styles.logged}>
                             <img src = {userIcon} className = {styles.userLogo} />
                             <h1 className = {styles.userName} >Dashboard</h1>
                         </Link>
-                        <Link to = "/nav/login/" className = {styles.options} style = {{cursor: 'pointer'}} onClick = {logout}>Logout</Link>
+                        <Link to = "/nav/login" className = {styles.options} style = {{cursor: 'pointer'}} onClick = {logout}>Logout</Link>
                     </div>
                     <div className = {styles.menuBlockMobile} >
                         <img src = {menulogo} className = {styles.menuLogo} id = "menuClick" onClick = {menuPop}/>
                     </div>
                     <div className = {styles.menu} id = "menuBlock">
                         <Link to = '/' className = {styles.options}>Home</Link>
-                        <Link to = '/nav/hostels/*' className = {styles.options}>Hostels</Link>
-                        <Link to = '/nav/contact/*' className = {styles.options}>Contact Us</Link>
-                        <Link to = {'/nav/dashboard/dashboardDefault/'}  className = {styles.logged}>
+                        <Link to = '/nav/hostels' className = {styles.options}>Hostels</Link>
+                        <Link to = '/nav/contact' className = {styles.options}>Contact Us</Link>
+                        <Link to = {'/nav/dashboard/dashboardDefault'}  className = {styles.logged}>
                             <img src = {userIcon} className = {styles.userLogo} />
                             <h1 className = {styles.userName} >Dashboard</h1>
                         </Link>
-                        <Link to = "/nav/login/" className = {styles.options} style = {{cursor: 'pointer'}} onClick = {logout}>Logout</Link>
+                        <Link to = "/nav/login" className = {styles.options} style = {{cursor: 'pointer'}} onClick = {logout}>Logout</Link>
                     </div>
                 </div>
                 <Outlet className = {styles.outlet}/>
@@ -72,20 +72,20 @@ const Navbar = (props) => {
                 <h1 className = {styles.title}>HosteLife</h1>
                 <div className = {styles.menuBlock} >
                     <Link to = '/' className = {styles.options}>Home</Link>
-                    <Link to = '/nav/hostels/*' className = {styles.options}>Hostels</Link>
-                    <Link to = '/nav/contact/*' className = {styles.options}>Contact Us</Link>
-                    <Link to = '/nav/userRegister/*'className = {styles.options}>Register</Link>
-                    <Link to = '/nav/userLogin/*' className = {styles.options}>Login</Link>
+                    <Link to = '/nav/hostels' className = {styles.options}>Hostels</Link>
+                    <Link to = '/nav/contact' className = {styles.options}>Contact Us</Link>
+                    <Link to = '/nav/userRegister'className = {styles.options}>Register</Link>
+                    <Link to = '/nav/userLogin' className = {styles.options}>Login</Link>
                 </div>
                 <div className = {styles.menuBlockMobile} >
                         <img src = {menulogo} className = {styles.menuLogo} id = "menuClick" onClick = {menuPop}/>
                 </div>
                 <div className = {styles.menu} id = "menuBlock">
                     <Link to = '/' className = {styles.options}>Home</Link>
-                    <Link to = '/nav/hostels/*' className = {styles.options}>Hostels</Link>
-                    <Link to = '/nav/contact/*' className = {styles.options}>Contact Us</Link>
-                    <Link to = '/nav/userRegister/*'className = {styles.options}>Register</Link>
-                    <Link to = '/nav/userLogin/*' className = {styles.options}>Login</Link>
+                    <Link to = '/nav/hostels' className = {styles.options}>Hostels</Link>
+                    <Link to = '/nav/contact' className = {styles.options}>Contact Us</Link>
+                    <Link to = '/nav/userRegister'className = {styles.options}>Register</Link>
+                    <Link to = '/nav/userLogin' className = {styles.options}>Login</Link>
                 </div>    
             </div>
             <Outlet className = {styles.outlet}/>

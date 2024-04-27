@@ -7,7 +7,7 @@ const Profile = () => {
     const [imageData, setImageData] = useState('');
 
     $.ajax({
-        url: 'http://localhost/wt/imageGet.php',
+        url: 'imageGet.php',
         type: 'POST',
         data: { 'id' : localStorage.getItem('token') },
         success: function (response) {
@@ -15,12 +15,11 @@ const Profile = () => {
         },
         error: function (xhr, status, error) {
             console.error('Error retrieving image:', error);
-            alert('Error retrieving image');
         }
     });
 
     $.ajax({
-        url : "http://localhost/wt/dashboard.php",
+        url : "dashboard.php",
         type : 'POST',
         data : {
             'type' : 'profile',
@@ -40,7 +39,7 @@ const Profile = () => {
 
     function updateProfile() {
         $.ajax({
-            url : "http://localhost/wt/dashboard.php",
+            url : "dashboard.php",
             type : 'POST',
             data : {
                 'type' : 'profileUpdate',
@@ -65,7 +64,7 @@ const Profile = () => {
         formData.append('email', localStorage.getItem('token'));
         $.ajax({
             type : 'POST',
-            url : 'http://localhost/wt/dashboard.php',
+            url : 'dashboard.php',
             data : formData,
             contentType: false,
             processData: false,
@@ -102,7 +101,9 @@ const Profile = () => {
                     
                 <div className = {styles.addRoomForm} >
                     <h1 className = {styles.addRoomTitle}>Hostel Image</h1>
-                    <img src={`data:image/jpeg;base64,${imageData}`} class = {styles.image}/>
+                    <div className = {styles.roomImage} >
+                        <img src={`data:image/jpeg;base64,${imageData}`} class = {styles.image}/>
+                    </div>
                     <input type = "file" accept='image/*' className = {styles.inputField} id = "newImage"/>
                     <button className = {styles.addRoomButton} onClick = {changeImage}>Change Image</button>
                 </div>
