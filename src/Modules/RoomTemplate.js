@@ -22,14 +22,13 @@ const RoomTemplate = (props) => {
             setImageData(response);
         },
         error: function (xhr, status, error) {
-            console.error('Error retrieving image:', error);
-            alert('Error retrieving image');
+            
         }
     });
 
     function sendQuery() {
         if(localStorage.getItem('user') == null) {
-            window.location.href = "/nav/userLogin/"
+            window.location.href = "/nav/userLogin";
         }
         textArea.current.style.display = 'inline-flex';
         query.current.style.display = 'none';
@@ -70,6 +69,10 @@ const RoomTemplate = (props) => {
     }
 
     function save() {
+        if(localStorage.getItem('user') == null) {
+            window.location.href = "/nav/userLogin";
+        }
+        
         $.ajax({
             url: 'handleQuery.php',
             type: 'POST',
@@ -84,8 +87,6 @@ const RoomTemplate = (props) => {
                 }
             },
             error: function (xhr, status, error) {
-                console.error('Error retrieving image:', error);
-                alert('Error retrieving image');
             }
         });
     }

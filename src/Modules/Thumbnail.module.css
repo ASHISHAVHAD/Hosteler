@@ -8,18 +8,18 @@
     margin: 2vh;
     user-select: none;
     border-radius: 1vh;
-    padding: 2vh;
     font-family: "Poppins", sans-serif;
     box-sizing: border-box;
-    align-items: center;
-    border: 0.3vh solid black;
+    height: 20vh;
 }
 
 @media (max-aspect-ratio: 1 ) {
     .outbox {
         flex-direction: column;
+        justify-content: center;
         width: 90vw;
         height: fit-content;
+        align-items: center;
     }
 }
 
@@ -47,14 +47,16 @@
     height: 20vh;
     width: 15vw;
     overflow: hidden;
-    border: 2px solid rgb(196, 196, 196);
-    border-radius: 1.5vh;
+    box-sizing: border-box;
+    border-radius: 1vh 0 0 1vh; 
 }
 
 @media (max-aspect-ratio: 1 ) {
     .leftbox {
         height: 15vh;
-        width: 70vw;
+        width: 90vw;
+        border-radius: 1vh 1vh 0 0;
+        margin: 0;
     }
 }
 
@@ -63,6 +65,9 @@
     width: 30vw;
     box-sizing: border-box;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 @media (max-aspect-ratio: 1 ) {
@@ -73,28 +78,32 @@
         align-items: center;
         justify-content: center;
         height: fit-content;
+        padding: 2vh;
     }   
 }
 
 .map {
     height: 20vh;
     width: 15vw;
+    box-sizing: border-box;
+    border-radius: 0 1vh 1vh 0;
 }
 
 @media (max-aspect-ratio: 1 ) {
     .map {
         height: 15vh;
-        width: 70vw;
+        width: 90vw;
+        border-radius: 0 0 1vh 1vh;
     }
 }
 
 .image {
-    width: 17vw;
+    width: 20vw;
 }
 
 @media (max-aspect-ratio: 1 ) {
     .image {
-        width: 80vw;
+        width: 100vw;
     }
 }
 
@@ -115,8 +124,14 @@
 .name {
     color: black;
     margin-bottom: 0;
-    font-size: 4vh;
+    font-size: 3vh;
     margin-top: 0;
+}
+
+@media (max-aspect-ratio: 1) {
+    .name {
+        text-align: center;
+    }
 }
 
 .mobile {

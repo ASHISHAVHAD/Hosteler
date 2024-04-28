@@ -13,7 +13,7 @@ const Navbar = (props) => {
     function logout() {
         localStorage.removeItem('token');
         localStorage.removeItem('user');
-        window.location.href = '/nav/userLogin/*';
+        window.location.href = '/nav/userLogin';
     }
     
     function menuPop() {
@@ -29,14 +29,18 @@ const Navbar = (props) => {
         }  
     }
 
+    function toHome () {
+        window.location.href = '/';
+    }
+
     if(localStorage.getItem('token') != null || localStorage.getItem('user') != null) {
 
         var user = localStorage.getItem('token');
         return (
             <div>
                 <div className = {styles.navbar}>
-                    <img src = {logo} class = {styles.logo}></img>
-                    <h1 className = {styles.title}>HosteLife</h1>
+                    <img src = {logo} className = {styles.logo}></img>
+                    <h1 className = {styles.title} onClick = {toHome}>HosteLife</h1>
                     <div className = {styles.menuBlock} >
                         <Link to = '/' className = {styles.options}>Home</Link>
                         <Link to = '/nav/hostels' className = {styles.options}>Hostels</Link>
@@ -65,11 +69,12 @@ const Navbar = (props) => {
             </div>
         )
     }
+
     return (
         <div>
             <div className = {styles.navbar}>
-                <img src = {logo} class = {styles.logo}></img>
-                <h1 className = {styles.title}>HosteLife</h1>
+                <img src = {logo} className = {styles.logo}></img>
+                <h1 className = {styles.title} onClick = {toHome}>HosteLife</h1>
                 <div className = {styles.menuBlock} >
                     <Link to = '/' className = {styles.options}>Home</Link>
                     <Link to = '/nav/hostels' className = {styles.options}>Hostels</Link>

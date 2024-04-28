@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Platypi:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 .body {
     display: flex;
@@ -20,12 +23,15 @@
     align-items: center;
     height: 10vh;
     box-sizing: border-box;
+    user-select: none;
 }
 
 @media (max-aspect-ratio: 1 ) {
     .navbar {
+        padding-left: 5vw;
+        padding-right: 5vw;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
         width: 100vw;
     }
 }
@@ -37,7 +43,7 @@
 
 @media (max-aspect-ratio : 1) {
     .logo {
-        height: 4vh;
+        height: 5vh;
         margin-left: 0;
     }
 }
@@ -63,6 +69,12 @@
     text-align: center;
     cursor: pointer;
     user-select: none;
+}
+
+@media (max-aspect-ratio : 1) {
+    .why {
+        display: none;
+    }
 }
 
 .why:hover, .login:hover {
@@ -121,12 +133,13 @@
     display: flex;
     user-select: none;
     box-sizing: border-box;
+    background-color: #c5ced1;
 }
 
 @media (max-aspect-ratio: 1 ) {
     .welcomeBox {
         height: 80vh;
-        margin-bottom: 10vh;
+        padding-bottom: 10vh;
         align-items: center;
         justify-content: center;
     }
@@ -138,7 +151,7 @@
     height: 50vh;
     font-family: "Josefin Sans", sans-serif;
     font-size: 4vh;
-    color: white;
+    color: black;
     width: 35vw;
     display: inline-flex;
     flex-direction: column;
@@ -159,9 +172,17 @@
     }
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Nova+Flat&display=swap');
+
 .title {
     margin: 0;
     margin-bottom: 2vh;
+    background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%);
+    color: whitesmoke;
+    padding: 2vh;
+    border-radius: 2vh;
+    font-family: "Nova Flat", system-ui;
+    font-weight: bold;
 }
 
 @media (max-aspect-ratio: 1 ) {
@@ -169,6 +190,10 @@
         display: inline-flex;
         text-align: center;
     }
+}
+
+.title:hover {
+    background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%);
 }
 
 .welcomePara {
@@ -201,7 +226,7 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: white;
+    background-color: #c5ced1;
     box-sizing: border-box;
 }
 
@@ -212,6 +237,8 @@
         box-sizing: border-box;
         justify-content: start;
         height: fit-content;
+        padding-top: 10vh;
+        padding-bottom: 10vh;
     }
 }
 
@@ -310,10 +337,8 @@
     padding: 20px;
     position: relative;
     text-align: center;
-    background-color: #FA8BFF;
-    background-image: linear-gradient(90deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);    
+    background-image: linear-gradient(to top, #29323c 0%, #485563 100%);
     background-size: 200% auto;
-    animation: gradientAnimation 5s linear infinite;
     user-select: none;
     box-sizing: border-box;
 }
@@ -349,4 +374,10 @@
 .socialImages {
     height: 5vh;
     margin: 2vh;
+    transition: all 0.3s;
+}
+
+.socialImages:hover {
+    height: 7vh;
+    transition: all 0.3s;
 }

@@ -12,7 +12,6 @@ import Register from './Modules/Register.js';
 import Login from './Modules/Login.js';
 import Dashboard from './Modules/Dashboard.js';
 import ImageUpload from './Modules/ImageUploader.js';
-import ImageRetriever from './Modules/imageGet.js';
 import AddRoom from './Modules/AddRoom.js';
 import Profile from './Modules/Profile.js';
 import Queries from './Modules/Queries.js';

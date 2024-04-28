@@ -72,7 +72,7 @@
 
 .search {
     height: 3.5vh;
-    width: 30vw;
+    width: 35vw;
     border: none;
     font-family: "Poppins", sans-serif;
     font-size: 1.7vh;
@@ -114,6 +114,7 @@
     height: 3vh;
     margin-right: 0.5vw;
 }
+
 .searchButton {
     user-select: none;
     display: inline-flex;
@@ -137,5 +138,10 @@
         border-radius: 3vw / 50%;
         padding: 1vh;
     }
+}
+
+.searchButton:hover {
+    background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%);
+    transition: all 0.25s;
 }
 

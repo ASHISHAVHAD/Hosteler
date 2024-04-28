@@ -18,7 +18,6 @@ const UpdateRoomPage = () => {
             'email' : user,
         },
         success(data) {
-            console.log(JSON.parse(data));
             setReturned(JSON.parse(data));
             setIsLoading(false);
         }

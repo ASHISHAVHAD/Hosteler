@@ -44,6 +44,7 @@ const UserLogin = () => {
                     }
                     else {
                         console.log(data);
+                        document.getElementById('passwordError').innerHTML = "Invalid email or password!";
                     }
                 }
             })

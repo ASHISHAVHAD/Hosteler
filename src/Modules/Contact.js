@@ -8,6 +8,26 @@ const Contact = () => {
     const[sent, setSent] = useState(false);
 
     function sendQuery() {
+        if(document.getElementById("name").value == '') {
+            document.getElementById("error").innerHTML = "All fields are required.";
+            return;
+        }
+
+        if(document.getElementById("mobile").value == '') {
+            document.getElementById("error").innerHTML = "All fields are required.";
+            return;
+        }
+
+        if(document.getElementById("email").value == '') {
+            document.getElementById("error").innerHTML = "All fields are required.";
+            return;
+        }
+
+        if(document.getElementById("queryText").value == '') {
+            document.getElementById("error").innerHTML = "All fields are required.";
+            return;
+        }
+
         $.ajax({
             url : "queries.php",
             type : 'post',
@@ -39,6 +59,7 @@ const Contact = () => {
                     <input type = "email" className = {styles.inputField} id = "email"/>
                     <label className = {styles.labels}>Message / Query</label>
                     <textarea className = {styles.inputField} id = "queryText"/>
+                    <span id = "error" className = {styles.error}></span>
                     <button className = {styles.send} onClick = {sendQuery}>Send Message</button>
                 </div>
             </div>

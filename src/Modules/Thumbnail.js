@@ -22,7 +22,7 @@ function Thumbnail(props) {
     return(
         <div className ={styles.outbox}>
             <div className = {styles.leftbox}>
-                <img src={`data:image/jpeg;base64,${imageData}`} class = {styles.image}/>
+                <img src={`data:image/jpeg;base64,${imageData}`} className = {styles.image}/>
             </div>
             <div className = {styles.rightbox}>
                 <h1 className = {styles.name}>{props.hostelName}</h1>
@@ -31,7 +31,7 @@ function Thumbnail(props) {
                 <p className = {styles.mobile}>{props.email}</p>
             </div>
             <div className = {styles.right}>
-                <iframe src = {"http://maps.google.com/maps?q=" + props.latitude + "," + props.longitude + "&z=16&output=embed"} className = {styles.map} />
+                <iframe src = {"https://maps.google.com/maps?q=" + props.latitude + "," + props.longitude + "&z=16&output=embed"} className = {styles.map} />
             </div>
         </div>
     )

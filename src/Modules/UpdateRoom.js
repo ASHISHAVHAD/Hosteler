@@ -23,7 +23,6 @@ const UpdateRoom = (props) => {
         },
         error: function (xhr, status, error) {
             console.error('Error retrieving image:', error);
-            alert('Error retrieving image');
         }
     });
 
@@ -58,7 +57,7 @@ const UpdateRoom = (props) => {
             processData: false,
             success (data) {
                 console.log(data);
-                var x = window.confirm("Updated successfully")
+                var x = window.confirm("Updated successfully");
                 if(x) {
                     window.location.reload();
                 }
