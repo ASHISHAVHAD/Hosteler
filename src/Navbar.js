@@ -6,7 +6,7 @@ import menulogo from "./menu-bar.png";
 import cancel from './cancelButton.png';
 import { useState } from 'react';
 
-const Navbar = (props) => {
+const Navbar = () => {
 
     const [menuOpen, setMenuOpen] = useState(false);
 
@@ -33,6 +33,18 @@ const Navbar = (props) => {
         window.location.href = '/';
     }
 
+    function toDashboard() {
+        if(localStorage.getItem('user') != null) {
+            window.location.href = '/nav/dashboard/userProfile';
+            return;
+        }
+
+        if(localStorage.getItem('token') != null) {
+            window.location.href = '/nav/dashboard/dashboardDefault';
+            return;
+        }
+    }
+
     if(localStorage.getItem('token') != null || localStorage.getItem('user') != null) {
 
         var user = localStorage.getItem('token');
@@ -45,10 +57,10 @@ const Navbar = (props) => {
                         <Link to = '/' className = {styles.options}>Home</Link>
                         <Link to = '/nav/hostels' className = {styles.options}>Hostels</Link>
                         <Link to = '/nav/contact' className = {styles.options}>Contact Us</Link>
-                        <Link to = {'/nav/dashboard/dashboardDefault'}  className = {styles.logged}>
+                        <label onClick = {toDashboard}  className = {styles.logged}>
                             <img src = {userIcon} className = {styles.userLogo} />
                             <h1 className = {styles.userName} >Dashboard</h1>
-                        </Link>
+                        </label>
                         <Link to = "/nav/login" className = {styles.options} style = {{cursor: 'pointer'}} onClick = {logout}>Logout</Link>
                     </div>
                     <div className = {styles.menuBlockMobile} >
@@ -58,10 +70,10 @@ const Navbar = (props) => {
                         <Link to = '/' className = {styles.options}>Home</Link>
                         <Link to = '/nav/hostels' className = {styles.options}>Hostels</Link>
                         <Link to = '/nav/contact' className = {styles.options}>Contact Us</Link>
-                        <Link to = {'/nav/dashboard/dashboardDefault'}  className = {styles.logged}>
+                        <label onClick = {toDashboard}  className = {styles.logged}>
                             <img src = {userIcon} className = {styles.userLogo} />
                             <h1 className = {styles.userName} >Dashboard</h1>
-                        </Link>
+                        </label>
                         <Link to = "/nav/login" className = {styles.options} style = {{cursor: 'pointer'}} onClick = {logout}>Logout</Link>
                     </div>
                 </div>

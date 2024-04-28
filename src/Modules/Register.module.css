@@ -10,10 +10,7 @@
     font-family: "Poppins", sans-serif;
     background-color: rgb(112, 112, 112);
     padding-bottom: 5vh;
-    background-color: #FA8BFF;
-    background-image: linear-gradient(90deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);    
-    background-size: 200% auto;
-    animation: gradientAnimation 10s linear infinite;
+    background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
 }
 
 @media (max-aspect-ratio: 1 ) {
