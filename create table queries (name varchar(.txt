@@ -1,0 +1,11 @@
+create TABLE hostels (password varchar(20), hostelName varchar(50), address varchar(120), mobile varchar(11), thumbnail longblob, latitude varchar(12), longitude varchar(12), email varchar(50) unique, id int PRIMARY KEY AUTO_INCREMENT)
+
+create table queries (name varchar(40), email varchar(50), mobile varchar(11), queryText varchar(300))
+
+create table roomqueries (sender varchar(50), reciever varchar(50), roomno varchar(10), floor varchar(10), message varchar(150), queryid int PRIMARY KEY)
+
+create table rooms (username varchar(50), roomno varchar(10), floor varchar(10), rent varchar(15), capacity int, currently_occupied int, image longblob, roomid int PRIMARY KEY AUTO_INCREMENT)
+
+create table savedhostels (email varchar(50), roomid int, saveid int PRIMARY KEY AUTO_INCREMENT)
+
+create table users (name varchar(40) PRIMARY KEY, mobile varchar(11), email varchar(50), password varchar(20))
